@@ -12,9 +12,13 @@ public class Start {
         library.addEdition(library.newspaper2);
         library.addEdition(library.newspaper3);
 
+        
 
-        library.printEditions();
-        System.out.print("Hey");
-        System.out.println("Hey");
+//        library.printEditions();
+//        library.removeEdition("Ana Karenina");
+//        library.printEditions();
+//
+//        System.out.println(library.getEditionName("Ana Karenina"));
+
     }
 }

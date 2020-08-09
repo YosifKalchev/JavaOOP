@@ -5,7 +5,6 @@ public class Library {
     private String libraryAddress;
     private String libraryWorkingTime;
 
-
     Edition book1 = new Edition("1984", "1949", "Georges Orwell");
     Edition book2 = new Edition("Ana Karenina", "1878", "Lev Tolstoy");
     Edition book3 = new Edition("Under the yoke", "1894", "Ivan Vazov");
@@ -15,6 +14,7 @@ public class Library {
 
     private Edition[] libraryList;
     public Library(int editionCount) {
+
         this.libraryList = new Edition[editionCount];
     }
 
@@ -35,17 +35,31 @@ public class Library {
         }
     }
 
-    public void printEditions() {
-        for (int i = 0; i < libraryList.length; i++) {
-            if(libraryList[i] != null) {
-                System.out.println("Book: " + libraryList[i].getName() + ", Author: "
-                        + libraryList[i].getAuthor() + ", Year of publish: "
-                                + libraryList[i].getYearOfPublish() );
+    public void removeEdition(String name) {
+        for (int editionIndex = 0; editionIndex <libraryList.length; editionIndex++) {
+            if(libraryList[editionIndex] != null &&
+                    libraryList[editionIndex].getName().equals(name) ) {
+                libraryList[editionIndex] = null;
+                break;
             }
         }
     }
 
-
+    public void printEditions() {
+        for (int i = 0; i < libraryList.length; i++) {
+            if(libraryList[i] != null) {
+                if (libraryList[i].getAuthor() != null) {
+                    System.out.println("Book: " + libraryList[i].getName() + "; Author: "
+                            + libraryList[i].getAuthor() + "; Year of publish: "
+                            + libraryList[i].getYearOfPublish());
+                }
+                if (libraryList[i].getDateOfPublish() != null) {
+                    System.out.println("Newspaper: " + libraryList[i].getName() +
+                            "; Date of publish: " + libraryList[i].getDateOfPublish() );
+                }
+            }
+        }
+    }
 
     public String getLibraryName() {
         return libraryName;
@@ -58,5 +72,6 @@ public class Library {
     public String getLibraryWorkingTime() {
         return libraryWorkingTime;
     }
+
 
 }

@@ -19,6 +19,10 @@ public class Edition {
         this.isAvailable = true;
     }
 
+
+
+
+
     public String getName() {
         return name;
     }
@@ -38,4 +42,6 @@ public class Edition {
     public String getYearOfPublish() {
         return yearOfPublish;
     }
+
+
 }
