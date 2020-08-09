@@ -1,6 +1,7 @@
-public class Main {
+public class Start {
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
+
 
         Library library = new Library(6);
 
@@ -12,9 +13,8 @@ public class Main {
         library.addEdition(library.newspaper3);
 
 
-       library.printEditions();
-
-
+        library.printEditions();
+        System.out.print("Hey");
+        System.out.println("Hey");
     }
-
 }
