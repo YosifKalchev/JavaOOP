@@ -1,6 +1,6 @@
 public class Edition {
 
-    private String name;
+    private final String name;
     private String author;
     private String dateOfPublish;
     private String yearOfPublish;
@@ -19,16 +19,18 @@ public class Edition {
         this.isAvailable = true;
     }
 
-
-
-
-
     public String getName() {
         return name;
     }
 
-    public boolean isAvailable() {
+    public boolean getIsAvailable() {
         return isAvailable;
+    }
+
+    public void changeIsAvailable() {
+        if (!this.isAvailable) {
+            this.isAvailable = true;
+        } else this.isAvailable = false;
     }
 
     public String getAuthor() {
@@ -42,6 +44,8 @@ public class Edition {
     public String getYearOfPublish() {
         return yearOfPublish;
     }
+
+
 
 
 }
