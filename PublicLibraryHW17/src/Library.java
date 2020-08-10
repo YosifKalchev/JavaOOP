@@ -44,6 +44,16 @@ public class Library {
         }
     }
 
+    public void printAllEditionsAvailable() {
+        System.out.println("\nThis is the list of all editions available: ");
+        for (int i = 0; i < libraryList.length; i++) {
+            if (libraryList[i] != null && libraryList[i].getIsAvailable() == true) {
+                System.out.print(libraryList[i].getName() + ", ");
+            }
+            System.out.println("");
+        }
+    }
+    
     public void bookEdition(String name) {
         for (int i = 0; i < libraryList.length; i++) {
             if (libraryList[i] != null && libraryList[i].getName().equals(name)) {
@@ -60,15 +70,6 @@ public class Library {
         return libraryName;
     }
 
-    public void printAllEditionsAvailable() {
-        System.out.println("\nThis is the list of all editions available: ");
-        for (int i = 0; i < libraryList.length; i++) {
-            if (libraryList[i] != null && libraryList[i].getIsAvailable() == true) {
-                System.out.print(libraryList[i].getName() + ", ");
-            }
-            System.out.println("");
-        }
-    }
 
     public String getLibraryAddress() {
         return libraryAddress;
