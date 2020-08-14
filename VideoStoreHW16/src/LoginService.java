@@ -9,6 +9,7 @@ public class LoginService {
     public LoginService (Input input) {
         this.input = input;
         this.userRepository = UserRepository.getInstance();
+        
     }
 
 
@@ -17,7 +18,7 @@ public class LoginService {
          String password = input.getPasswordFromUser();
 
          if (isValid(username) && isValid(password)) {
-            userRepository.getUserByUsername(username); 
+            userRepository.getUserByUsername(username);
          }
     }
 
