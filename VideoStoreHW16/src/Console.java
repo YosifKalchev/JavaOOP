@@ -16,6 +16,12 @@ public class Console implements Input {
     }
 
     @Override
+    public String getEMailFromUser() {
+        print("Enter eMail: ");
+        return scanner.nextLine();
+    }
+
+    @Override
     public String getPasswordFromUser() {
         print("Enter password: ");
         return scanner.nextLine();

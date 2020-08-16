@@ -27,5 +27,14 @@ public class UserRepository {
         return null;
     }
 
+    public User getUserByEMail(String eMail) {
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getEMail().equals(eMail)) {
+                return users.get(i);
+            }
+        }
+        return null;
+    }
+
 
 }

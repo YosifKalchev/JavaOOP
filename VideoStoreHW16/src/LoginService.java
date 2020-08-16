@@ -1,3 +1,4 @@
+import DataBase.Admin;
 import DataBase.User;
 import DataBase.UserRepository;
 
@@ -15,17 +16,29 @@ public class LoginService {
 
 
     public void requestLogin() {
-         String username = input.getUsernameFromUser();
+         String loginEMail = input.getEMailFromUser();
          String password = input.getPasswordFromUser();
 
-         if (isValid(username) && isValid(password)) {
-             User currentUser = userRepository.getUserByUsername(username);
+         if (isValid(loginEMail) && isValid(password)) {
+             User currentUser = userRepository.getUserByEMail(loginEMail);
              if (currentUser != null && currentUser.getPassword().equals(password)) {
                  loggedUser = currentUser;
              } else {
-                 Input.showErrorWrongInputNameOrPassword();
+                 Input.showErrorWrongLoginCredentials();
              }
          }
+    }
+
+    public boolean isUserLogged() {
+        return loggedUser != null;
+    }
+
+    public boolean isUserAdmin() {
+        return isUserLogged() && loggedUser instanceof Admin;
+    }
+
+    public void logout() {
+        loggedUser = null;
     }
 
     private boolean isValid (String text) {
