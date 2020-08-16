@@ -18,6 +18,7 @@ public class UserRepository {
 
         users = new ArrayList<>();
         users.add(new Admin("admin", "admin@abv.bg", "admin"));
+        users.add(new Customer("customer1", "customer1@abv.bg", "customer1"));
     }
 
     public User getUserByUsername(String username) {

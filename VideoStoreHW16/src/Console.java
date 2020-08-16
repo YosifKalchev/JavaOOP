@@ -38,6 +38,11 @@ public class Console implements Input {
 
     }
 
+    @Override
+    public void showCustomerOptions() {
+        System.out.println("You are a customer");
+    }
+
     public void print(String text) {
         System.out.println(text);
     }

@@ -10,4 +10,6 @@ public interface Input {
     void showErrorWrongLoginCredentials();
 
     void showAdminOptions();
+
+    void showCustomerOptions();
 }
