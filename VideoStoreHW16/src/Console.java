@@ -27,6 +27,17 @@ public class Console implements Input {
         return scanner.nextLine();
     }
 
+    @Override
+    public void showErrorWrongLoginCredentials() {
+        System.out.println("Wrong eMail or password.");
+    }
+
+    @Override
+    public void showAdminOptions() {
+        System.out.println("You are now admin");
+
+    }
+
     public void print(String text) {
         System.out.println(text);
     }

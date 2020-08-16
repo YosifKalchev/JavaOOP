@@ -6,6 +6,8 @@ public interface Input {
     String getEMailFromUser();
     String getPasswordFromUser();
 
-    static void showErrorWrongLoginCredentials() {
-    }
+
+    void showErrorWrongLoginCredentials();
+
+    void showAdminOptions();
 }
