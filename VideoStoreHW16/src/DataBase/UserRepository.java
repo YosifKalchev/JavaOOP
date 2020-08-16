@@ -5,13 +5,13 @@ import java.util.List;
 
 public class UserRepository {
 
-    private static UserRepository instance = new UserRepository();
+    private static final UserRepository instance = new UserRepository();
 
     public static UserRepository getInstance() {
         return instance;
     }
 
-    private List<User> users;
+    private final List<User> users;
 
 
     private UserRepository() {
@@ -40,4 +40,7 @@ public class UserRepository {
     }
 
 
+    public void createCustomer(Customer customer) {
+        users.add(customer);
+    }
 }

@@ -1,4 +1,4 @@
-public class LoginController {
+public class LoginController implements Controller {
 
     private final LoginService loginService;
     private final Input input;
@@ -9,33 +9,27 @@ public class LoginController {
         startProgram();
     }
 
-    private void startProgram() {
+    @Override
+    public void startProgram() {
 
         login();
         if (loginService.isUserAdmin()) {
-            input.showAdminOptions();
+            SwitchController.getInstance(input).startAdmin();
         } else {
-            input.showCustomerOptions();
+            new CustomerController(input);
         }
     }
 
     private void login() {
 
-//        while (!loginService.isUserLogged()) {
-//            String username = input.getUsernameFromUser();
-//            String password = input.getPasswordFromUser();
-//            if (!loginService.requestLogin(username, password)) {
-//                input.showErrorWrongLoginCredentials();
-//            }
-//
-//        }
+
         while (!loginService.isUserLogged()) {
+            input.showLoginMessage();
             String eMail = input.getEMailFromUser();
             String password = input.getPasswordFromUser();
             if (!loginService.requestLogin(eMail, password)) {
                 input.showErrorWrongLoginCredentials();
             }
-
         }
     }
 }
