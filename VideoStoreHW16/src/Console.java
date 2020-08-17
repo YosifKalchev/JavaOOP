@@ -1,3 +1,5 @@
+import Constants.AdminOption;
+
 import java.util.Scanner;
 
 public class Console implements Input {
@@ -46,9 +48,16 @@ public class Console implements Input {
     }
 
     @Override
-    public int getAdminOptionFromUser() {
-        return Integer.parseInt(getStringFromUser());
+    public AdminOption getAdminOptionFromUser() {
+        int userInput;
+        do {
+            print("Enter a valid admin option:");
+            userInput = getNumberFromUser();
+    }  while (AdminOption.convertToAdminOption(userInput) == null);
+        return AdminOption.convertToAdminOption(userInput);
     }
+
+
 
     @Override
     public void showErrorWrongLoginCredentials() {
@@ -58,10 +67,10 @@ public class Console implements Input {
     @Override
     public void showAdminOptions() {
         System.out.println(
-                "Press 1 for logout\n" +
-                "Press 2 to show all films\n" +
-                "Press 3 to show all customers\n" +
-                "Press 4 to create new customer\n");
+                "Press "+ AdminOption.LOGOUT.value() + " for logout\n" +
+                "Press "+ AdminOption.SHOW_ALL_FILMS.value() + " to show all films\n" +
+                "Press "+ AdminOption.SHOW_ALL_CUSTOMERS.value() + " to show all customers\n" +
+                "Press "+ AdminOption.CREATE_NEW_CUSTOMER.value() + " to create new customer\n");
     }
 
     @Override
@@ -81,6 +90,15 @@ public class Console implements Input {
 
     private String getStringFromUser() {
         return scanner.nextLine();
+    }
+    private int getNumberFromUser() {
+        int number;
+        try {
+            number = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            return getNumberFromUser();
+        }
+            return number;
     }
     public void print(String text) {
         System.out.println(text);

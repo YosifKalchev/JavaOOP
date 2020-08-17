@@ -12,8 +12,9 @@ public class SwitchController {
     private final Controller adminController;
 
     private SwitchController (Input input) {
-        loginController = new LoginController(input);
-        adminController = new AdminController(input);
+        LoginService loginService = new LoginService();
+        loginController = new LoginController(input, loginService);
+        adminController = new AdminController(input, loginService);
     }
 
     public void startLogin() {

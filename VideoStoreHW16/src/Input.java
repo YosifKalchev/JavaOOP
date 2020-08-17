@@ -1,3 +1,5 @@
+import Constants.AdminOption;
+
 public interface Input {
 
 
@@ -8,7 +10,7 @@ public interface Input {
     String getNewCustomerUsernameFromUser();
     String getNewCustomerEMailAdressFromUser();
     String getNewCustomerPasswordFromUser();
-    int getAdminOptionFromUser();
+
 
     void showErrorWrongLoginCredentials();
 
@@ -17,4 +19,6 @@ public interface Input {
     void showCustomerOptions();
 
     void showLoginMessage();
+
+    AdminOption getAdminOptionFromUser();
 }

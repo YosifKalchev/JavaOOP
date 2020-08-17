@@ -3,9 +3,9 @@ public class LoginController implements Controller {
     private final LoginService loginService;
     private final Input input;
 
-    public LoginController(Input input) {
+    public LoginController(Input input, LoginService loginService) {
         this.input = input;
-        this.loginService = new LoginService();
+        this.loginService = loginService;
         startProgram();
     }
 
