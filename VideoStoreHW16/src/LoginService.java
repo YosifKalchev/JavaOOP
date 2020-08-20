@@ -10,6 +10,7 @@ public class LoginService {
 
 
     public LoginService () {
+
         this.userRepository = UserRepository.getInstance();
     }
 
@@ -39,6 +40,7 @@ public class LoginService {
     }
 
     public boolean isUserAdmin() {
+
         return isUserLogged() && loggedUser instanceof Admin;
     }
 
@@ -47,6 +49,7 @@ public class LoginService {
     }
 
     private boolean isValid (String text) {
-        return text != null && !text.isEmpty();
+
+        return (text != null && !text.isEmpty());
     }
 }

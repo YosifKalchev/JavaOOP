@@ -1,4 +1,5 @@
 import Constants.AdminOption;
+import Constants.CustomerOption;
 
 import java.util.Scanner;
 
@@ -8,6 +9,7 @@ public class Console implements Input {
     private final Scanner scanner;
 
     public Console() {
+
         this.scanner = new Scanner(System.in);
     }
 
@@ -36,8 +38,8 @@ public class Console implements Input {
     }
 
     @Override
-    public String getNewCustomerEMailAdressFromUser() {
-        print("Enter eMail adress for the new customer: ");
+    public String getNewCustomerEMailAddressFromUser() {
+        print("Enter eMail address for the new customer: ");
         return getStringFromUser();
     }
 
@@ -60,7 +62,7 @@ public class Console implements Input {
 
 
     @Override
-    public void showErrorWrongLoginCredentials() {
+    public void showErrorWrongLoginInput() {
         System.out.println("Wrong eMail or password.");
     }
 
@@ -76,11 +78,11 @@ public class Console implements Input {
     @Override
     public void showCustomerOptions() {
         System.out.println(
-                "Press 1 for logout\n" +
-                "Press 2 to show all available films\n" +
-                "Press 3 to return film\n" +
-                "Press 4 to take film\n" +
-                "Press 5 to show all films taken by me\n");
+                "Press "+ CustomerOption.LOGOUT.value() + " for logout\n" +
+                "Press "+ CustomerOption.SHOW_ALL_AVAILABLE_FILMS.value() + " to show all available films\n" +
+                "Press "+ CustomerOption.RETURN_THE_FILM.value() + " to return film\n" +
+                "Press "+ CustomerOption.TAKE_THE_FILM.value() + " to take film\n" +
+                "Press "+ CustomerOption.SHOW_ALL_FILMS_TAKEN.value() + " to show all films taken\n");
     }
 
     @Override

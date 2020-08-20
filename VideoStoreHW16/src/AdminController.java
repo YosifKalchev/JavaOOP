@@ -33,10 +33,10 @@ public class AdminController implements Controller {
 
     private void createCustomerOptionChosen() {
         String newCustomerUsername = input.getNewCustomerUsernameFromUser();
-        String newCustomerEMailAdress = input.getNewCustomerEMailAdressFromUser();
+        String newCustomerEMailAddress = input.getNewCustomerEMailAddressFromUser();
         String newCustomerPassword = input.getNewCustomerPasswordFromUser();
 
-        Customer customer = new Customer(newCustomerUsername, newCustomerEMailAdress,newCustomerPassword);
+        Customer customer = new Customer(newCustomerUsername, newCustomerEMailAddress,newCustomerPassword);
         UserRepository.getInstance().createCustomer(customer);
     }
 

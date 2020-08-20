@@ -28,7 +28,7 @@ public class LoginController implements Controller {
             String eMail = input.getEMailFromUser();
             String password = input.getPasswordFromUser();
             if (!loginService.requestLogin(eMail, password)) {
-                input.showErrorWrongLoginCredentials();
+                input.showErrorWrongLoginInput();
             }
         }
     }

@@ -8,11 +8,11 @@ public interface Input {
     String getEMailFromUser();
     String getPasswordFromUser();
     String getNewCustomerUsernameFromUser();
-    String getNewCustomerEMailAdressFromUser();
+    String getNewCustomerEMailAddressFromUser();
     String getNewCustomerPasswordFromUser();
 
 
-    void showErrorWrongLoginCredentials();
+    void showErrorWrongLoginInput();
 
     void showAdminOptions();
 
