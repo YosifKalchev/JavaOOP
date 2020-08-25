@@ -1,4 +1,5 @@
 import Constants.AdminOption;
+import Constants.CustomerOption;
 
 public interface Input {
 
@@ -21,4 +22,6 @@ public interface Input {
     void showLoginMessage();
 
     AdminOption getAdminOptionFromUser();
+
+    CustomerOption getCustomerOptionFromUser();
 }

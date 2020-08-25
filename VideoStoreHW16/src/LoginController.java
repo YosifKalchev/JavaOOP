@@ -6,7 +6,6 @@ public class LoginController implements Controller {
     public LoginController(Input input, LoginService loginService) {
         this.input = input;
         this.loginService = loginService;
-        startProgram();
     }
 
     @Override
@@ -16,12 +15,11 @@ public class LoginController implements Controller {
         if (loginService.isUserAdmin()) {
             SwitchController.getInstance(input).startAdmin();
         } else {
-            new CustomerController(input);
+            SwitchController.getInstance(input).startCustomer();
         }
     }
 
     private void login() {
-
 
         while (!loginService.isUserLogged()) {
             input.showLoginMessage();

@@ -13,9 +13,11 @@ public class SwitchController {
         LoginService loginService = new LoginService();
         loginController = new LoginController(input, loginService);
         adminController = new AdminController(input, loginService);
-//        customerController = new CustomerController(input, loginService);
-        customerController = null;
+        customerController = new CustomerController(input, loginService);
+
     }
+
+
 
     public static SwitchController getInstance(Input input) {
         if (instance == null) instance = new SwitchController(input);
@@ -30,5 +32,5 @@ public class SwitchController {
         adminController.startProgram();
     }
 
-
+    public void startCustomer() { customerController.startProgram();}
 }

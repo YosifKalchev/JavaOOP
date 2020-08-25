@@ -59,6 +59,15 @@ public class Console implements Input {
         return AdminOption.convertToAdminOption(userInput);
     }
 
+    @Override
+    public CustomerOption getCustomerOptionFromUser() {
+        int userInput;
+        do {
+            print("Enter a valid customer option:");
+            userInput = getNumberFromUser();
+        }  while (CustomerOption.convertToAdminOption(userInput) == null);
+        return CustomerOption.convertToAdminOption(userInput);
+    }
 
 
     @Override
