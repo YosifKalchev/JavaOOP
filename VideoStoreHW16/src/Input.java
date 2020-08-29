@@ -11,6 +11,7 @@ public interface Input {
     String getNewCustomerUsernameFromUser();
     String getNewCustomerEMailAddressFromUser();
     String getNewCustomerPasswordFromUser();
+    String getStringFromUser();
 
 
     void showErrorWrongLoginInput();
@@ -20,6 +21,8 @@ public interface Input {
     void showCustomerOptions();
 
     void showLoginMessage();
+
+
 
     AdminOption getAdminOptionFromUser();
 

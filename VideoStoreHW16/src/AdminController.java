@@ -1,6 +1,7 @@
 import constants.AdminOption;
 import dataBase.Customer;
 import dataBase.UserRepository;
+import videoStore.TapeRepository;
 
 public class AdminController implements Controller {
 
@@ -21,7 +22,7 @@ public class AdminController implements Controller {
             chosenOption = input.getAdminOptionFromUser();
             switch (chosenOption) {
                 case LOGOUT : logoutOptionChosen(); break;
-//                case SHOW_ALL_FILMS : showAllFilmsOptionChosen(); break;
+                case SHOW_ALL_TAPES: showAllTapesOptionChosen(); break;
                 case SHOW_ALL_CUSTOMERS: showAllCustomersOptionChosen(); break;
                 case CREATE_NEW_CUSTOMER: createCustomerOptionChosen(); break;
             }
@@ -48,8 +49,9 @@ public class AdminController implements Controller {
         UserRepository.getInstance().showAllCustomers();
     }
 
-//    private void showAllFilmsOptionChosen() {
-//    }
+    private void showAllTapesOptionChosen() {
+        TapeRepository.getInstance().showAllTapes();
+    }
 
     private void login() {
 

@@ -79,7 +79,7 @@ public class Console implements Input {
     public void showAdminOptions() {
         System.out.println(
                 "Press "+ AdminOption.LOGOUT.value() + " for logout\n" +
-                "Press "+ AdminOption.SHOW_ALL_FILMS.value() + " to show all films\n" +
+                "Press "+ AdminOption.SHOW_ALL_TAPES.value() + " to show all tapes\n" +
                 "Press "+ AdminOption.SHOW_ALL_CUSTOMERS.value() + " to show all customers\n" +
                 "Press "+ AdminOption.CREATE_NEW_CUSTOMER.value() + " to create new customer\n");
     }
@@ -88,10 +88,10 @@ public class Console implements Input {
     public void showCustomerOptions() {
         System.out.println(
                 "Press "+ CustomerOption.LOGOUT.value() + " for logout\n" +
-                "Press "+ CustomerOption.SHOW_ALL_AVAILABLE_FILMS.value() + " to show all available films\n" +
-                "Press "+ CustomerOption.RETURN_THE_FILM.value() + " to return film\n" +
-                "Press "+ CustomerOption.TAKE_THE_FILM.value() + " to take film\n" +
-                "Press "+ CustomerOption.SHOW_ALL_FILMS_TAKEN.value() + " to show all films taken\n");
+                "Press "+ CustomerOption.SHOW_ALL_AVAILABLE_TAPES.value() + " to show all available films\n" +
+                "Press "+ CustomerOption.RETURN_TAPE.value() + " to return film\n" +
+                "Press "+ CustomerOption.TAKE_TAPE.value() + " to take film\n" +
+                "Press "+ CustomerOption.SHOW_ALL_TAPES_TAKEN.value() + " to show all films taken\n");
     }
 
     @Override
@@ -99,9 +99,11 @@ public class Console implements Input {
         print("No logged user. Please, login.");
     }
 
-    private String getStringFromUser() {
+
+    public String getStringFromUser() {
         return scanner.nextLine();
     }
+
     private int getNumberFromUser() {
         int number;
         try {

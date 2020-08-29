@@ -43,7 +43,7 @@ public class UserRepository {
     public void showAllCustomers() {
             print("All customers:\n");
         for (int i = 1; i < users.size(); i++) {
-            print("Customer: " + users.get(i).getUsername() + " "
+            print("Customer"+i+": " + users.get(i).getUsername() + " "
                     + ";  eMail: " + users.get(i).getEMail());
         }
             print("");

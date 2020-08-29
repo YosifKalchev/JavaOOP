@@ -3,7 +3,7 @@ package constants;
 public enum AdminOption {
 
     LOGOUT (1),
-    SHOW_ALL_FILMS(2),
+    SHOW_ALL_TAPES(2),
     SHOW_ALL_CUSTOMERS(3),
     CREATE_NEW_CUSTOMER(4);
 

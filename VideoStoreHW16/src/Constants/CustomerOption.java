@@ -3,10 +3,10 @@ package constants;
 public enum CustomerOption {
 
     LOGOUT (1),
-    SHOW_ALL_AVAILABLE_FILMS(2),
-    RETURN_THE_FILM(3),
-    TAKE_THE_FILM(4),
-    SHOW_ALL_FILMS_TAKEN (5);
+    SHOW_ALL_AVAILABLE_TAPES(2),
+    RETURN_TAPE(3),
+    TAKE_TAPE(4),
+    SHOW_ALL_TAPES_TAKEN(5);
 
     private int value;
     CustomerOption(int value) {

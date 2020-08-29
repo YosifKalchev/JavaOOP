@@ -1,4 +1,5 @@
 import constants.CustomerOption;
+import videoStore.TapeRepository;
 
 public class CustomerController implements Controller {
 
@@ -21,8 +22,27 @@ public class CustomerController implements Controller {
             chosenOption = input.getCustomerOptionFromUser();
             switch (chosenOption) {
                 case LOGOUT : logoutOptionChosen(); break;
+                case SHOW_ALL_AVAILABLE_TAPES: showAllAvailableTapesOptionChosen(); break;
+                case RETURN_TAPE: returnTapeOptionChosen(); break;
+                case TAKE_TAPE: takeTapeOptionChosen(); break;
+                case SHOW_ALL_TAPES_TAKEN: showAllTapesTakenOptionChosen(); break;
             }
         }
+    }
+
+    private void showAllTapesTakenOptionChosen() {
+    }
+
+    //TODO format takeTape method!!!
+    private void takeTapeOptionChosen() {
+        String tapeName = input.getStringFromUser();
+    }
+
+    private void returnTapeOptionChosen() {
+    }
+
+    private void showAllAvailableTapesOptionChosen() {
+        TapeRepository.getTapesTaken().showAllAvailableTapes();
     }
 
     private void logoutOptionChosen() {
@@ -30,7 +50,5 @@ public class CustomerController implements Controller {
         SwitchController.getInstance(input).startLogin();
     }
 
-    private void login() {
 
-    }
 }
