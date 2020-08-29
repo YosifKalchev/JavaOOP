@@ -1,4 +1,5 @@
 import constants.CustomerOption;
+import videoStore.Tape;
 import videoStore.TapeRepository;
 
 public class CustomerController implements Controller {
@@ -33,9 +34,9 @@ public class CustomerController implements Controller {
     private void showAllTapesTakenOptionChosen() {
     }
 
-    //TODO format takeTape method!!!
     private void takeTapeOptionChosen() {
         String tapeName = input.getStringFromUser();
+        TapeRepository.getInstance().takeTape(TapeRepository.getInstance().getTapeByName(tapeName));
     }
 
     private void returnTapeOptionChosen() {

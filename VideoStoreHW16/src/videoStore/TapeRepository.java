@@ -66,7 +66,6 @@ public class TapeRepository {
 
     public void takeTape(Tape tape) {
         tapesTaken.add(tape);
-
     }
 
     private void print(String text) {
