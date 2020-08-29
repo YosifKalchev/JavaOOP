@@ -1,4 +1,4 @@
-package DataBase;
+package dataBase;
 
 public class User {
 

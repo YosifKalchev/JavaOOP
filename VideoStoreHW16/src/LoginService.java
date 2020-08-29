@@ -1,6 +1,6 @@
-import DataBase.Admin;
-import DataBase.User;
-import DataBase.UserRepository;
+import dataBase.Admin;
+import dataBase.User;
+import dataBase.UserRepository;
 
 public class LoginService {
 

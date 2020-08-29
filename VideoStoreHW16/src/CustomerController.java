@@ -1,7 +1,4 @@
-import Constants.AdminOption;
-import Constants.CustomerOption;
-import DataBase.Customer;
-import DataBase.UserRepository;
+import constants.CustomerOption;
 
 public class CustomerController implements Controller {
 

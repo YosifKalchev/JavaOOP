@@ -1,5 +1,5 @@
-import Constants.AdminOption;
-import Constants.CustomerOption;
+import constants.AdminOption;
+import constants.CustomerOption;
 
 public interface Input {
 
