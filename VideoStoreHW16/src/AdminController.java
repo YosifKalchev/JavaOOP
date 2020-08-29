@@ -1,7 +1,8 @@
 import constants.AdminOption;
 import dataBase.Customer;
+import dataBase.TapesTakenRepository;
 import dataBase.UserRepository;
-import videoStore.TapeRepository;
+import dataBase.TapeRepository;
 
 public class AdminController implements Controller {
 
@@ -50,10 +51,8 @@ public class AdminController implements Controller {
     }
 
     private void showAllTapesOptionChosen() {
+
         TapeRepository.getInstance().showAllTapes();
-    }
-
-    private void login() {
-
+        TapesTakenRepository.getInstance().showAllTapesTaken();
     }
 }

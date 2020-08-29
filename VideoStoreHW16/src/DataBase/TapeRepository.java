@@ -1,7 +1,4 @@
-package videoStore;
-
-import dataBase.Admin;
-import dataBase.Customer;
+package dataBase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,27 +7,17 @@ public class TapeRepository {
 
     private static final TapeRepository instance = new TapeRepository();
 
-    private static final TapeRepository taken = new TapeRepository();
-
     public static TapeRepository getInstance() {
         return instance;
     }
 
-    public static TapeRepository getTapesTaken() {
-        return taken;
-    }
-
     private final List<Tape> tapes;
-    private final List<Tape> tapesTaken;
 
     private TapeRepository() {
-
         tapes = new ArrayList<>();
         tapes.add(new Tape("The terminator"));
         tapes.add(new Tape("Agent 007"));
         tapes.add(new Tape("Troy"));
-        tapesTaken = new ArrayList<>();
-        tapesTaken.add(new Tape("Taken"));
     }
 
 
@@ -48,12 +35,9 @@ public class TapeRepository {
     public void showAllTapes() {
             print("The list of all tapes:\n");
         for (int i = 0; i < tapes.size(); i++) {
-            print("Tape: " + tapes.get(i).getName());
+            print("Tape: " + tapes.get(i).getName() + "  is taken: " +
+                    tapes.get(i).getIsTaken());
         }
-        for (int y = 0; y < tapesTaken.size(); y++) {
-            print("Tape: " + tapesTaken.get(y).getName());
-        }
-            print("");
     }
 
     public void showAllAvailableTapes() {
@@ -65,9 +49,17 @@ public class TapeRepository {
     }
 
     public void takeTape(Tape tape) {
-        tapesTaken.add(tape);
+        tape.setTaken(true);
+        for (int i = 0; i < tapes.size(); i++) {
+            if (tapes.get(i).equals(tape)) {
+                tapes.remove(tapes.get(i));
+            }
+        }
     }
 
+    public void returnTape (Tape tape) {
+        tapes.add(tape);
+    }
     private void print(String text) {
         System.out.println(text);
     }

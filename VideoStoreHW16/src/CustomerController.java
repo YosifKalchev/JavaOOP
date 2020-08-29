@@ -1,6 +1,6 @@
 import constants.CustomerOption;
-import videoStore.Tape;
-import videoStore.TapeRepository;
+import dataBase.TapeRepository;
+import dataBase.TapesTakenRepository;
 
 public class CustomerController implements Controller {
 
@@ -36,14 +36,19 @@ public class CustomerController implements Controller {
 
     private void takeTapeOptionChosen() {
         String tapeName = input.getStringFromUser();
+        TapesTakenRepository.getInstance().addToTakenTapes(TapeRepository.getInstance().getTapeByName(tapeName));
         TapeRepository.getInstance().takeTape(TapeRepository.getInstance().getTapeByName(tapeName));
     }
 
     private void returnTapeOptionChosen() {
+        String tapeName = input.getStringFromUser();
+        TapeRepository.getInstance().returnTape(TapesTakenRepository.getInstance().getTapeByName(tapeName));
+        TapesTakenRepository.getInstance().returnTape(TapesTakenRepository.getInstance().getTapeByName(tapeName));
+
     }
 
     private void showAllAvailableTapesOptionChosen() {
-        TapeRepository.getTapesTaken().showAllAvailableTapes();
+        TapeRepository.getInstance().showAllAvailableTapes();
     }
 
     private void logoutOptionChosen() {
