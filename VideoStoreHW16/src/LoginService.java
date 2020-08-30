@@ -6,12 +6,19 @@ public class LoginService {
 
 
     private final UserRepository userRepository;
-    private User loggedUser;
-
+    public static User loggedUser;
 
     public LoginService () {
 
         this.userRepository = UserRepository.getInstance();
+    }
+
+    public static void setLoggedUser(User loggedUser) {
+        LoginService.loggedUser = loggedUser;
+    }
+
+    public User getLoggedUser() {
+        return loggedUser;
     }
 
     /**
@@ -28,7 +35,7 @@ public class LoginService {
         if (isValid(eMail) && isValid(password)) {
             User currentUser = userRepository.getUserByEMail(eMail);
             if (currentUser != null && currentUser.getPassword().equals(password)) {
-                loggedUser = currentUser;
+                setLoggedUser(currentUser);
                 result = true;
             }
         }
@@ -36,16 +43,17 @@ public class LoginService {
     }
 
     public boolean isUserLogged() {
-        return loggedUser != null;
+        return getLoggedUser() != null;
     }
+
 
     public boolean isUserAdmin() {
 
-        return isUserLogged() && loggedUser instanceof Admin;
+        return isUserLogged() && getLoggedUser() instanceof Admin;
     }
 
     public void logout() {
-        loggedUser = null;
+        setLoggedUser(null);
     }
 
     private boolean isValid (String text) {

@@ -33,4 +33,6 @@ public class SwitchController {
     }
 
     public void startCustomer() { customerController.startProgram();}
+
+//    LoginService.loggedUser.
 }

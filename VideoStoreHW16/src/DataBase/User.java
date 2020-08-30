@@ -12,11 +12,9 @@ public class User {
         this.username = username;
         this.eMail = eMail;
         this.password = password;
-
     }
 
     public String getUsername() {
-
         return username;
     }
 

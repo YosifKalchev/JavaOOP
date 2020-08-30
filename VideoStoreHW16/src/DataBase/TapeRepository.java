@@ -38,6 +38,7 @@ public class TapeRepository {
             print("Tape: " + tapes.get(i).getName() + "  is taken: " +
                     tapes.get(i).getIsTaken());
         }
+        TapesTakenRepository.getInstance().showAllTapesTaken();
     }
 
     public void showAllAvailableTapes() {

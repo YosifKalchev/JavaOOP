@@ -1,11 +1,13 @@
 import constants.CustomerOption;
 import dataBase.TapeRepository;
 import dataBase.TapesTakenRepository;
+import dataBase.User;
 
 public class CustomerController implements Controller {
 
     protected final LoginService loginService;
     private final Input input;
+    User loggedUser;
 
     public CustomerController(Input input, LoginService loginService) {
         this.input = input;
@@ -13,9 +15,9 @@ public class CustomerController implements Controller {
     }
 
 
-
     @Override
     public void startProgram() {
+
         System.out.print("You are now logged as an CUSTOMER. Choose an option:\n");
         CustomerOption chosenOption = null;
         while (chosenOption != CustomerOption.LOGOUT) {
@@ -36,15 +38,17 @@ public class CustomerController implements Controller {
 
     private void takeTapeOptionChosen() {
         String tapeName = input.getStringFromUser();
+        TapesTakenRepository.setTapeTakerUser(loginService.getLoggedUser());
+        TapeRepository.getInstance().getTapeByName(tapeName).setTapeTaker(loginService.getLoggedUser());
         TapesTakenRepository.getInstance().addToTakenTapes(TapeRepository.getInstance().getTapeByName(tapeName));
         TapeRepository.getInstance().takeTape(TapeRepository.getInstance().getTapeByName(tapeName));
+
     }
 
     private void returnTapeOptionChosen() {
         String tapeName = input.getStringFromUser();
         TapeRepository.getInstance().returnTape(TapesTakenRepository.getInstance().getTapeByName(tapeName));
         TapesTakenRepository.getInstance().returnTape(TapesTakenRepository.getInstance().getTapeByName(tapeName));
-
     }
 
     private void showAllAvailableTapesOptionChosen() {
@@ -56,5 +60,7 @@ public class CustomerController implements Controller {
         SwitchController.getInstance(input).startLogin();
     }
 
-
+    public User getLoggedUser() {
+        return loggedUser;
+    }
 }

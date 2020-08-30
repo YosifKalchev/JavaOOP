@@ -5,6 +5,12 @@ import java.util.List;
 
 public class TapesTakenRepository {
 
+    public static User tapeTakerUser;
+
+    public static void setTapeTakerUser(User tapeTakerUser) {
+        TapesTakenRepository.tapeTakerUser = tapeTakerUser;
+    }
+
     private static final TapesTakenRepository instance = new TapesTakenRepository();
 
     public static TapesTakenRepository getInstance() {
@@ -21,7 +27,8 @@ public class TapesTakenRepository {
     public void showAllTapesTaken() {
         print("The list of all tapes taken:\n");
         for (int i = 0; i < tapesTaken.size(); i++) {
-            print("Tape: " + tapesTaken.get(i).getName());
+            print("Tape: " + tapesTaken.get(i).getName()  +
+                    "  . Taken by: " + tapesTaken.get(i).getTapeTaker().getUsername());
         }
     }
 
@@ -36,8 +43,14 @@ public class TapesTakenRepository {
     public void returnTape(Tape tape) {
         tape.setTaken(false);
         for (int i = 0; i < tapesTaken.size(); i++) {
-            if (tapesTaken.get(i).equals(tape)) {
-                tapesTaken.remove(tapesTaken.get(i));
+            if (tapesTaken.get(i).getTapeTaker().equals(tapeTakerUser)) {
+                if (tapesTaken.get(i).equals(tape)) {
+                    tapesTaken.remove(tapesTaken.get(i));
+                }
+        } else {
+                print("You cannot return a book which is taken by another customer." +
+                        "Return a book that you have taken.");
+                returnTape(tape);
             }
         }
     }
