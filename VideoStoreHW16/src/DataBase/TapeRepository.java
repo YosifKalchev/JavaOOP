@@ -5,6 +5,8 @@ import java.util.List;
 
 public class TapeRepository {
 
+    public static User tapeTakerUser;
+
     private static final TapeRepository instance = new TapeRepository();
 
     public static TapeRepository getInstance() {
@@ -15,11 +17,10 @@ public class TapeRepository {
 
     private TapeRepository() {
         tapes = new ArrayList<>();
-        tapes.add(new Tape("The terminator"));
-        tapes.add(new Tape("Agent 007"));
+        tapes.add(new Tape("Monk"));
+        tapes.add(new Tape("Rambo"));
         tapes.add(new Tape("Troy"));
     }
-
 
 
 
@@ -33,12 +34,11 @@ public class TapeRepository {
     }
 
     public void showAllTapes() {
-            print("The list of all tapes:\n");
+            System.out.print("The list of all tapes:\n");
         for (int i = 0; i < tapes.size(); i++) {
             print("Tape: " + tapes.get(i).getName() + "  is taken: " +
                     tapes.get(i).getIsTaken());
         }
-        TapesTakenRepository.getInstance().showAllTapesTaken();
     }
 
     public void showAllAvailableTapes() {
@@ -50,17 +50,26 @@ public class TapeRepository {
     }
 
     public void takeTape(Tape tape) {
-        tape.setTaken(true);
         for (int i = 0; i < tapes.size(); i++) {
             if (tapes.get(i).equals(tape)) {
                 tapes.remove(tapes.get(i));
             }
         }
+        tape.setIsTaken(true);
     }
 
     public void returnTape (Tape tape) {
         tapes.add(tape);
     }
+
+    public void addTape (Tape tape) {
+        tapes.add(tape);
+    }
+
+    public void removeTape (Tape tape) {
+        tapes.remove(tape);
+    }
+
     private void print(String text) {
         System.out.println(text);
     }

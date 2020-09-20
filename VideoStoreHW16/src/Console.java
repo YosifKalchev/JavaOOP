@@ -1,6 +1,5 @@
 import constants.AdminOption;
 import constants.CustomerOption;
-
 import java.util.Scanner;
 
 public class Console implements Input {
@@ -88,10 +87,12 @@ public class Console implements Input {
     public void showCustomerOptions() {
         System.out.println(
                 "Press "+ CustomerOption.LOGOUT.value() + " for logout\n" +
-                "Press "+ CustomerOption.SHOW_ALL_AVAILABLE_TAPES.value() + " to show all available films\n" +
+                "Press "+ CustomerOption.SHOW_ALL_AVAILABLE_TAPES.value() +
+                        " to show all available films\n" +
                 "Press "+ CustomerOption.RETURN_TAPE.value() + " to return film\n" +
                 "Press "+ CustomerOption.TAKE_TAPE.value() + " to take film\n" +
-                "Press "+ CustomerOption.SHOW_ALL_TAPES_TAKEN.value() + " to show all films taken\n");
+                "Press "+ CustomerOption.SHOW_ALL_TAPES_TAKEN.value() +
+                        " to show all films taken\n");
     }
 
     @Override

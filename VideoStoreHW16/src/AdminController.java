@@ -30,8 +30,6 @@ public class AdminController implements Controller {
         }
     }
 
-
-
     private void logoutOptionChosen() {
         loginService.logout();
         SwitchController.getInstance(input).startLogin();

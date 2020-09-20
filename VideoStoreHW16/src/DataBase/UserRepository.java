@@ -15,12 +15,10 @@ public class UserRepository {
 
 
     private UserRepository() {
-
         users = new ArrayList<>();
         users.add(new Admin("adm", "adm@", "adm"));
         users.add(new Customer("cus", "cus@", "cus"));
         users.add(new Customer("cus2", "cus2@", "cus2"));
-
     }
 
     public User getUserByUsername(String username) {

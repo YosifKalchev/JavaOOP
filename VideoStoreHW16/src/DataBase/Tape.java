@@ -18,7 +18,7 @@ public class Tape {
         return isTaken;
     }
 
-    public void setTaken(boolean taken) {
+    public void setIsTaken(boolean taken) {
         isTaken = taken;
     }
 

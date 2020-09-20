@@ -2,9 +2,9 @@ package dataBase;
 
 public class User {
 
-    private String username;
-    private String eMail;
-    private String password;
+    private final String username;
+    private final String eMail;
+    private final String password;
 
 
 
@@ -12,6 +12,12 @@ public class User {
         this.username = username;
         this.eMail = eMail;
         this.password = password;
+    }
+
+    public User() {
+        this.username = "currentUser";
+        this.eMail = "currentEmail";
+        this.password = "currentPassword";
     }
 
     public String getUsername() {

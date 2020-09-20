@@ -1,13 +1,10 @@
 import constants.CustomerOption;
-import dataBase.TapeRepository;
-import dataBase.TapesTakenRepository;
-import dataBase.User;
+import dataBase.*;
 
 public class CustomerController implements Controller {
 
     protected final LoginService loginService;
     private final Input input;
-    User loggedUser;
 
     public CustomerController(Input input, LoginService loginService) {
         this.input = input;
@@ -38,17 +35,16 @@ public class CustomerController implements Controller {
 
     private void takeTapeOptionChosen() {
         String tapeName = input.getStringFromUser();
-        TapesTakenRepository.setTapeTakerUser(loginService.getLoggedUser());
-        TapeRepository.getInstance().getTapeByName(tapeName).setTapeTaker(loginService.getLoggedUser());
-        TapesTakenRepository.getInstance().addToTakenTapes(TapeRepository.getInstance().getTapeByName(tapeName));
-        TapeRepository.getInstance().takeTape(TapeRepository.getInstance().getTapeByName(tapeName));
-
+        Tape currentTape = TapeRepository.getInstance().getTapeByName(tapeName);
+        TapesTakenRepository.getInstance().addTape(currentTape);
+        TapeRepository.getInstance().removeTape(currentTape);
     }
 
     private void returnTapeOptionChosen() {
         String tapeName = input.getStringFromUser();
-        TapeRepository.getInstance().returnTape(TapesTakenRepository.getInstance().getTapeByName(tapeName));
-        TapesTakenRepository.getInstance().returnTape(TapesTakenRepository.getInstance().getTapeByName(tapeName));
+        Tape currentTape = TapesTakenRepository.getInstance().getTapeByName(tapeName);
+        TapeRepository.getInstance().addTape(currentTape);
+        TapesTakenRepository.getInstance().removeTape(currentTape);
     }
 
     private void showAllAvailableTapesOptionChosen() {
@@ -58,9 +54,5 @@ public class CustomerController implements Controller {
     private void logoutOptionChosen() {
         loginService.logout();
         SwitchController.getInstance(input).startLogin();
-    }
-
-    public User getLoggedUser() {
-        return loggedUser;
     }
 }

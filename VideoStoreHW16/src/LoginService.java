@@ -1,6 +1,6 @@
-import dataBase.Admin;
-import dataBase.User;
-import dataBase.UserRepository;
+import dataBase.*;
+
+import java.util.Currency;
 
 public class LoginService {
 
@@ -36,9 +36,12 @@ public class LoginService {
             User currentUser = userRepository.getUserByEMail(eMail);
             if (currentUser != null && currentUser.getPassword().equals(password)) {
                 setLoggedUser(currentUser);
+                CurrentUser.setLoggedUser(loggedUser);
                 result = true;
+                ;
             }
         }
+
         return result;
     }
 
