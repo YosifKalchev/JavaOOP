@@ -6,12 +6,13 @@ public class Tape {
 
     private final String name;
     private boolean isTaken;
-    public User tapeTaker;
+    public String tapeTaker;
+
 
     public Tape(String name) {
         this.name = name;
         isTaken = false;
-        this.tapeTaker = null;
+        this.tapeTaker = UserRepository.getInstance().getUserByUsername("admin").toString();
     }
 
     public boolean getIsTaken() {
@@ -30,11 +31,11 @@ public class Tape {
         return isTaken;
     }
 
-    public User getTapeTaker() {
+    public String getTapeTaker() {
         return tapeTaker;
     }
 
     public void setTapeTaker(User tapeTaker) {
-        this.tapeTaker = tapeTaker;
+        this.tapeTaker = UserRepository.getInstance().getUsername(tapeTaker);
     }
 }

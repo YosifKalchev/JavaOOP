@@ -39,17 +39,16 @@ public class AdminController implements Controller {
         String newCustomerUsername = input.getNewCustomerUsernameFromUser();
         String newCustomerEMailAddress = input.getNewCustomerEMailAddressFromUser();
         String newCustomerPassword = input.getNewCustomerPasswordFromUser();
-
         Customer customer = new Customer(newCustomerUsername, newCustomerEMailAddress,newCustomerPassword);
         UserRepository.getInstance().createCustomer(customer);
     }
 
     private void showAllCustomersOptionChosen() {
+
         UserRepository.getInstance().showAllCustomers();
     }
 
     private void showAllTapesOptionChosen() {
-
         TapeRepository.getInstance().showAllTapes();
         TapesTakenRepository.getInstance().showAllTapesTaken();
     }

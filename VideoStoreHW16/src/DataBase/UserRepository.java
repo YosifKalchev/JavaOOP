@@ -16,7 +16,7 @@ public class UserRepository {
 
     private UserRepository() {
         users = new ArrayList<>();
-        users.add(new Admin("adm", "adm@", "adm"));
+        users.add(new Admin("admin", "admin@", "admin"));
         users.add(new Customer("cus", "cus@", "cus"));
         users.add(new Customer("cus2", "cus2@", "cus2"));
     }
@@ -55,5 +55,14 @@ public class UserRepository {
 
     private void print(String text) {
         System.out.println(text);
+    }
+
+    public String getUsername (User user) {
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).equals(user)) {
+                return user.getUsername();
+            }
+        }
+        return null;
     }
 }

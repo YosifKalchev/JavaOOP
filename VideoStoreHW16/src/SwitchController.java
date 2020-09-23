@@ -6,9 +6,6 @@ public class SwitchController {
     private final Controller customerController;
 
 
-
-
-
     private SwitchController (Input input) {
         LoginService loginService = new LoginService();
         loginController = new LoginController(input, loginService);
@@ -16,8 +13,6 @@ public class SwitchController {
         customerController = new CustomerController(input, loginService);
 
     }
-
-
 
     public static SwitchController getInstance(Input input) {
         if (instance == null) instance = new SwitchController(input);

@@ -13,18 +13,29 @@ public class TapeRepository {
         return instance;
     }
 
-    private final List<Tape> tapes;
+    private static List<Tape> tapes;
 
     private TapeRepository() {
         tapes = new ArrayList<>();
-        tapes.add(new Tape("Monk"));
-        tapes.add(new Tape("Rambo"));
-        tapes.add(new Tape("Troy"));
+        tapes.add(new Tape("monk"));
+        tapes.add(new Tape("rambo"));
+        tapes.add(new Tape("troy"));
+    }
+
+    public boolean isValid(String tapeName) {
+        boolean check = false;
+        for (int i = 0; i < tapes.size(); i++) {
+            if (tapes.get(i).getName().equals(tapeName)) {
+                check = true;
+                break;
+            }
+        }
+        return check;
     }
 
 
-
     public Tape getTapeByName(String name) {
+
         for (int i = 0; i < tapes.size(); i++) {
             if (tapes.get(i).getName().equals(name)) {
                 return tapes.get(i);
@@ -36,8 +47,7 @@ public class TapeRepository {
     public void showAllTapes() {
             System.out.print("The list of all tapes:\n");
         for (int i = 0; i < tapes.size(); i++) {
-            print("Tape: " + tapes.get(i).getName() + "  is taken: " +
-                    tapes.get(i).getIsTaken());
+            print("Tape: " + tapes.get(i).getName() + " - available");
         }
     }
 
@@ -49,21 +59,11 @@ public class TapeRepository {
         print("");
     }
 
-    public void takeTape(Tape tape) {
-        for (int i = 0; i < tapes.size(); i++) {
-            if (tapes.get(i).equals(tape)) {
-                tapes.remove(tapes.get(i));
-            }
-        }
-        tape.setIsTaken(true);
-    }
-
-    public void returnTape (Tape tape) {
-        tapes.add(tape);
-    }
 
     public void addTape (Tape tape) {
         tapes.add(tape);
+        tape.setIsTaken(false);
+        tape.setTapeTaker(UserRepository.getInstance().getUserByUsername("admin"));
     }
 
     public void removeTape (Tape tape) {

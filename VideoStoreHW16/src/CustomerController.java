@@ -15,7 +15,7 @@ public class CustomerController implements Controller {
     @Override
     public void startProgram() {
 
-        System.out.print("You are now logged as an CUSTOMER. Choose an option:\n");
+        print("You are now logged as an CUSTOMER. Choose an option:\n");
         CustomerOption chosenOption = null;
         while (chosenOption != CustomerOption.LOGOUT) {
             input.showCustomerOptions();
@@ -30,29 +30,57 @@ public class CustomerController implements Controller {
         }
     }
 
-    private void showAllTapesTakenOptionChosen() {
-    }
+
 
     private void takeTapeOptionChosen() {
-        String tapeName = input.getStringFromUser();
-        Tape currentTape = TapeRepository.getInstance().getTapeByName(tapeName);
-        TapesTakenRepository.getInstance().addTape(currentTape);
-        TapeRepository.getInstance().removeTape(currentTape);
+
+            String tapeName = input.getStringFromUser();
+            Tape currentTape = TapeRepository.getInstance().getTapeByName(tapeName);
+            Tape currentTapeTaken = TapesTakenRepository.getInstance().getTapeByName(tapeName);
+            if (TapeRepository.getInstance().isValid(tapeName)
+                    || TapesTakenRepository.getInstance().isValid(tapeName)) {
+                Tape checkTape = (currentTape != null) ? currentTape : currentTapeTaken;
+                if (!checkTape.isTaken()) {
+                    TapesTakenRepository.getInstance().addTape(checkTape);
+                    TapeRepository.getInstance().removeTape(checkTape);
+                } else print("This tape is already taken.\n");
+            } else print("Enter a valid tape name.\n");
     }
 
     private void returnTapeOptionChosen() {
+
         String tapeName = input.getStringFromUser();
         Tape currentTape = TapesTakenRepository.getInstance().getTapeByName(tapeName);
-        TapeRepository.getInstance().addTape(currentTape);
-        TapesTakenRepository.getInstance().removeTape(currentTape);
+        Tape currentTapeReturned = TapeRepository.getInstance().getTapeByName(tapeName);
+        if (TapeRepository.getInstance().isValid(tapeName)
+                || TapesTakenRepository.getInstance().isValid(tapeName)) {
+            Tape checkTape = (currentTape != null) ? currentTape : currentTapeReturned;
+            if (checkTape.isTaken()) {
+                if (TapesTakenRepository.isReturnOptionValid(checkTape)) {
+                    TapesTakenRepository.getInstance().returnTape(currentTape);
+                    TapeRepository.getInstance().addTape(currentTape);
+                    TapesTakenRepository.getInstance().removeTape(checkTape);
+                }
+                else print("You haven't take the tape you are trying to return.\n");
+            } else print("This tape is already returned.\n");
+        } else print("Enter a valid tape name.\n");
+
     }
 
     private void showAllAvailableTapesOptionChosen() {
         TapeRepository.getInstance().showAllAvailableTapes();
     }
 
+    private void showAllTapesTakenOptionChosen() {
+        TapesTakenRepository.getInstance().showAllTapesTakenByCurrentUser();
+    }
+
     private void logoutOptionChosen() {
         loginService.logout();
         SwitchController.getInstance(input).startLogin();
+    }
+
+    private void print(String text) {
+        System.out.println(text);
     }
 }

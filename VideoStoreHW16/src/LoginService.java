@@ -15,6 +15,7 @@ public class LoginService {
 
     public static void setLoggedUser(User loggedUser) {
         LoginService.loggedUser = loggedUser;
+        CurrentUser.setLoggedUser(loggedUser);
     }
 
     public User getLoggedUser() {
@@ -36,9 +37,8 @@ public class LoginService {
             User currentUser = userRepository.getUserByEMail(eMail);
             if (currentUser != null && currentUser.getPassword().equals(password)) {
                 setLoggedUser(currentUser);
-                CurrentUser.setLoggedUser(loggedUser);
+//                CurrentUser.setLoggedUser(loggedUser);
                 result = true;
-                ;
             }
         }
 
