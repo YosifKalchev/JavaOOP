@@ -5,8 +5,6 @@ import java.util.List;
 
 public class TapeRepository {
 
-    public static User tapeTakerUser;
-
     private static final TapeRepository instance = new TapeRepository();
 
     public static TapeRepository getInstance() {
@@ -17,9 +15,10 @@ public class TapeRepository {
 
     private TapeRepository() {
         tapes = new ArrayList<>();
-        tapes.add(new Tape("monk"));
-        tapes.add(new Tape("rambo"));
-        tapes.add(new Tape("troy"));
+        tapes.add(new Tape("Monk"));
+        tapes.add(new Tape("Rambo"));
+        tapes.add(new Tape("Troy"));
+        tapes.add(new Tape("Castle"));
     }
 
     public boolean isValid(String tapeName) {

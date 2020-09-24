@@ -7,7 +7,7 @@ public enum AdminOption {
     SHOW_ALL_CUSTOMERS(3),
     CREATE_NEW_CUSTOMER(4);
 
-    private int value;
+    private final int value;
     AdminOption(int value) {
         this.value = value;
     }

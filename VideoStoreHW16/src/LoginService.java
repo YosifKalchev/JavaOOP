@@ -1,7 +1,5 @@
 import dataBase.*;
 
-import java.util.Currency;
-
 public class LoginService {
 
 

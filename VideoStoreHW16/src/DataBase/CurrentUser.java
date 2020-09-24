@@ -2,7 +2,7 @@ package dataBase;
 
 public class CurrentUser{
 
-    public static User loggedUser = new User();
+    private static User loggedUser = new User();
 
     public static User getLoggedUser() {
         return loggedUser;

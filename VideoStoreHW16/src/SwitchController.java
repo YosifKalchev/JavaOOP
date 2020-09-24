@@ -11,7 +11,6 @@ public class SwitchController {
         loginController = new LoginController(input, loginService);
         adminController = new AdminController(input, loginService);
         customerController = new CustomerController(input, loginService);
-
     }
 
     public static SwitchController getInstance(Input input) {
@@ -28,5 +27,4 @@ public class SwitchController {
     }
 
     public void startCustomer() { customerController.startProgram();}
-
 }

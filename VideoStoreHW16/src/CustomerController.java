@@ -11,7 +11,6 @@ public class CustomerController implements Controller {
         this.loginService = loginService;
     }
 
-
     @Override
     public void startProgram() {
 
@@ -30,10 +29,8 @@ public class CustomerController implements Controller {
         }
     }
 
-
-
     private void takeTapeOptionChosen() {
-
+            print("Enter the name of the tape: ");
             String tapeName = input.getStringFromUser();
             Tape currentTape = TapeRepository.getInstance().getTapeByName(tapeName);
             Tape currentTapeTaken = TapesTakenRepository.getInstance().getTapeByName(tapeName);
@@ -48,7 +45,7 @@ public class CustomerController implements Controller {
     }
 
     private void returnTapeOptionChosen() {
-
+        print("Enter the name of the tape: ");
         String tapeName = input.getStringFromUser();
         Tape currentTape = TapesTakenRepository.getInstance().getTapeByName(tapeName);
         Tape currentTapeReturned = TapeRepository.getInstance().getTapeByName(tapeName);

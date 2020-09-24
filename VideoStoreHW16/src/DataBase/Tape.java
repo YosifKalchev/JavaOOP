@@ -6,17 +6,13 @@ public class Tape {
 
     private final String name;
     private boolean isTaken;
-    public String tapeTaker;
+    private String tapeTaker;
 
 
     public Tape(String name) {
         this.name = name;
         isTaken = false;
         this.tapeTaker = UserRepository.getInstance().getUserByUsername("admin").toString();
-    }
-
-    public boolean getIsTaken() {
-        return isTaken;
     }
 
     public void setIsTaken(boolean taken) {

@@ -8,7 +8,7 @@ public enum CustomerOption {
     TAKE_TAPE(4),
     SHOW_ALL_TAPES_TAKEN(5);
 
-    private int value;
+    private final int value;
     CustomerOption(int value) {
         this.value = value;
     }
