@@ -12,11 +12,6 @@ public class Console implements Input {
         this.scanner = new Scanner(System.in);
     }
 
-    @Override
-    public String getUsernameFromUser() {
-        print("Enter username: ");
-        return getStringFromUser();
-    }
 
     @Override
     public String getEMailFromUser() {
