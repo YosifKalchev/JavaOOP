@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface Controller {
+public interface Controller {
+
+    void StartProgram();
 }

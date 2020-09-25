@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class WaiterController {
+public class WaiterController implements Controller {
 }

@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class ChefController {
+public class ChefController implements Controller {
+
+    protected final LoginService loginService;
 }
