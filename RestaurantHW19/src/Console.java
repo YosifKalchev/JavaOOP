@@ -42,15 +42,15 @@ public class Console implements Input {
     @Override
     public void showWaiterOptions() {
         print(
-                "Press " + WaiterOption.OPTION_1.value + "for ...\n" +
-                "Press " + WaiterOption.OPTION_1.value + "for ...");
+                "Press " + WaiterOption.LOGOUT.value + " for logout.\n" +
+                "Press " + WaiterOption.OPTION_2.value + "for ...");
     }
 
     @Override
     public void showChefOptions() {
         print(
-                "Press " + ChefOption.OPTION_1.value + "for ...\n" +
-                "Press " + ChefOption.OPTION_1.value + "for ...");
+                "Press " + ChefOption.LOGOUT.value + " for logout.\n" +
+                "Press " + ChefOption.OPTION_2.value + " for ...");
     }
 
     @Override

@@ -1,14 +1,15 @@
 public class SuperController {
+
     private static SuperController instance;
     private final Controller loginController;
     private final Controller waiterController;
     private final Controller chefController;
 
-    public SuperController(Input input) {
-        LoginService loginService = new LoginService;
-        loginController = new LoginController (input, loginService);
-        waiterController = new WaiterController (input, loginService);
-        chefController = new ChefController (input, loginService);
+    private SuperController(Input input) {
+        LoginService loginService = new LoginService();
+        loginController = new LoginController(input, loginService);
+        waiterController = new WaiterController(input, loginService);
+        chefController = new ChefController(input, loginService);
     }
 
     public static SuperController getInstance(Input input) {
@@ -17,7 +18,7 @@ public class SuperController {
         } return instance;
     }
 
-    public void startLogin() { LoginController.startProgram(); }
-    public void startWaiter() { WaiterController.startProgram(); }
-    public void startChef() { ChefController.startProgram(); }
+    public void startLogin() { loginController.startProgram(); }
+    public void startWaiter() { waiterController.startProgram(); }
+    public void startChef() { chefController.startProgram(); }
 }

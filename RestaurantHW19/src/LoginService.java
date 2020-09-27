@@ -1,3 +1,8 @@
+import dataBase.CurrentUser;
+import dataBase.User;
+import dataBase.UserRepository;
+import dataBase.Waiter;
+
 public class LoginService {
 
     private final UserRepository userRepository;
@@ -18,8 +23,8 @@ public class LoginService {
     }
 
     /**
-     * Checks if user with such eMail exists and compare its password with the one provided.
-     * Logged user is assigned to the variable loggedUser.
+     * Checks if user with such username exists and compare its password with the one provided.
+     * Logged username is assigned to the variable loggedUser.
      * @param password password for the provided eMail.
      * @return true if user exists and password matches and false otherwise.
      */

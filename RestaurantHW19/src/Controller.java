@@ -1,4 +1,5 @@
 public interface Controller {
 
-    void StartProgram();
+
+    void startProgram();
 }

@@ -2,7 +2,7 @@ package constants;
 
 public enum WaiterOption {
 
-    OPTION_1 (1),
+    LOGOUT(1),
     OPTION_2 (2);
 
     public int value;
