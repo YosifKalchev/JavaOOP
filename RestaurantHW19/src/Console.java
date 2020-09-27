@@ -43,7 +43,7 @@ public class Console implements Input {
     public void showWaiterOptions() {
         print(
                 "Press " + WaiterOption.LOGOUT.value + " for logout.\n" +
-                "Press " + WaiterOption.OPTION_2.value + "for ...");
+                "Press " + WaiterOption.OPTION_2.value + " for ...");
     }
 
     @Override
@@ -62,9 +62,9 @@ public class Console implements Input {
     public WaiterOption getWaiterOptionFromUser() {
         int userInput;
         do {
-            print("Enter a valid chef option:");
+            print("Enter a valid waiter option:");
             userInput = getNumberFromUser();
-        }  while (ChefOption.convertToChefOption(userInput) == null);
+        }  while (WaiterOption.convertToWaiterOption(userInput) == null);
         return WaiterOption.convertToWaiterOption(userInput);
     }
 

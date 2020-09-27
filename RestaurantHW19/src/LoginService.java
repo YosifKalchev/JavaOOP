@@ -1,6 +1,6 @@
 import dataBase.CurrentUser;
 import dataBase.User;
-import dataBase.UserRepository;
+import dataBase.Repositories.UserRepository;
 import dataBase.Waiter;
 
 public class LoginService {

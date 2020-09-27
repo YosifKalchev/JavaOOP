@@ -1,4 +1,5 @@
 import constants.WaiterOption;
+import dataBase.Repositories.OrderRepository;
 
 public class WaiterController implements Controller {
     protected final LoginService loginService;
@@ -26,12 +27,42 @@ public class WaiterController implements Controller {
             chosenOption = input.getWaiterOptionFromUser();
             switch (chosenOption) {
                 case LOGOUT: logoutOptionChosen(); break;
-                case OPTION_2:
-                    System.out.println("option 2"); break;
-//                case SHOW_ALL_TAPES: showAllTapesOptionChosen(); break;
-//                case SHOW_ALL_CUSTOMERS: showAllCustomersOptionChosen(); break;
-//                case CREATE_NEW_CUSTOMER: createCustomerOptionChosen(); break;
+                case CREATE_ORDER: createOrderOptionChosen(); break;
+                case CHANGE_ORDER_STATUS: changeOrderStatusOptionChosen(); break;
+                case SEE_ALL_ACTIVE_ORDERS: seeAllActiveOrdersOptionChosen(); break;
+                case SEE_ORDER_HISTORY: seeOrderHistoryOptionChosen(); break;
+                case SEE_THE_MENU: seeTheMenuOptionChosen(); break;
+                case CHANGE_THE_MENU: changeTheMenuOptionChosen(); break;
+
             }
         }
     }
+
+    private void removeConsumableOptionChosen() {
+
+    }
+
+    private void addConsumableOptionChosen() {
+
+    }
+
+    private void changeTheMenuOptionChosen() {
+    }
+
+    private void seeTheMenuOptionChosen() {
+    }
+
+    private void seeOrderHistoryOptionChosen() {
+    }
+
+    private void seeAllActiveOrdersOptionChosen() {
+
+    }
+
+    private void changeOrderStatusOptionChosen() {
+    }
+
+    private void createOrderOptionChosen() {
+    }
+
 }

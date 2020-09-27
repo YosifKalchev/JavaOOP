@@ -3,7 +3,8 @@ package constants;
 public enum ChefOption {
 
     LOGOUT(1),
-    OPTION_2 (2);
+    SEE_NEW_ORDERS (2),
+    CHANGE_ORDER_STATUS (3);
 
 
     public int value;

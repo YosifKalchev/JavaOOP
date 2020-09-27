@@ -1,6 +1,8 @@
-package dataBase;
+package dataBase.Repositories;
 
+import dataBase.Chef;
 import dataBase.User;
+import dataBase.Waiter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +20,9 @@ public class UserRepository {
 
     private UserRepository() {
         users = new ArrayList<>();
-        users.add(new Waiter ("Waiter", "waiter"));
-        users.add(new Chef ("Chef Manchev", "manchev"));
-        users.add(new Chef ("Chef Nikolchev", "nikolchev"));
+        users.add(new Waiter("Waiter", "waiter"));
+        users.add(new Chef("Manchev", "manchev"));
+        users.add(new Chef ("Nikolchev", "nikolchev"));
     }
 
     public User getUserByUsername(String username) {

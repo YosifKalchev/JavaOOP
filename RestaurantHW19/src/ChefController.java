@@ -1,6 +1,5 @@
 import constants.ChefOption;
-
-import java.util.function.Supplier;
+import dataBase.Repositories.OrderRepository;
 
 public class ChefController implements Controller {
 
@@ -22,9 +21,19 @@ public class ChefController implements Controller {
             chosenOption = input.getChefOptionFromUser();
             switch (chosenOption) {
                 case LOGOUT : logoutOptionChosen(); break;
-                case OPTION_2: print("option2"); break;
+                case SEE_NEW_ORDERS: seeNewOrdersOptionChosen(); break;
+                case CHANGE_ORDER_STATUS: changeOrderStatusOptionChosen(); break;
             }
         }
+    }
+
+    private void changeOrderStatusOptionChosen() {
+
+    }
+
+    private void seeNewOrdersOptionChosen() {
+        OrderRepository.getInstance().showAllOrders();
+        /// TODO: 27.9.2020 г. check if the order is ACTIVE
     }
 
     private void logoutOptionChosen() {
