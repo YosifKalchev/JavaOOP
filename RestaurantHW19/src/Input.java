@@ -11,6 +11,7 @@ public interface Input {
 
     void showErrorLoginInput();
     void showWaiterOptions();
+    void showWaiterOptionsForTheMenu();
     void showChefOptions();
     void showLoginMessage();
 

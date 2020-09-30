@@ -38,15 +38,29 @@ public class WaiterController implements Controller {
         }
     }
 
+    private void changeTheMenuOptionChosen() {
+        WaiterOption chosenOption = WaiterOption.CHANGE_THE_MENU;
+        while (chosenOption != WaiterOption.LOGOUT) {
+            input.showWaiterOptionsForTheMenu();
+            chosenOption = input.getWaiterOptionFromUser();
+            switch (chosenOption) {
+                case ADD_CONSUMABLE: addConsumableOptionChosen(); break;
+                case REMOVE_CONSUMABLE: removeConsumableOptionChosen(); break;
+                case BACK_TO_MAIN_WAITER_MENU: backToMainWaiterMenuOptionChosen(); break;
+            }
+        }
+    }
+
+    private void backToMainWaiterMenuOptionChosen() {
+        //// TODO: 30.9.2020 г. Fix this method to return to main Waiter menu! 
+    }
+
     private void removeConsumableOptionChosen() {
 
     }
 
     private void addConsumableOptionChosen() {
 
-    }
-
-    private void changeTheMenuOptionChosen() {
     }
 
     private void seeTheMenuOptionChosen() {

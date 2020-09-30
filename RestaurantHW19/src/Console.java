@@ -1,5 +1,6 @@
 import constants.ChefOption;
 import constants.WaiterOption;
+import dataBase.Waiter;
 
 import java.util.Scanner;
 
@@ -43,14 +44,30 @@ public class Console implements Input {
     public void showWaiterOptions() {
         print(
                 "Press " + WaiterOption.LOGOUT.value + " for logout.\n" +
-                "Press " + WaiterOption.OPTION_2.value + " for ...");
+                "Press " + WaiterOption.CREATE_ORDER.value + " to create an order.\n" +
+                "Press " + WaiterOption.CHANGE_ORDER_STATUS.value + " to change the order status.\n" +
+                "Press " + WaiterOption.SEE_ALL_ACTIVE_ORDERS.value + " to see all active orders.\n" +
+                "Press " + WaiterOption.SEE_ORDER_HISTORY.value + " to see the order history.\n" +
+                "Press " + WaiterOption.SEE_THE_MENU.value + " to create an order.\n" +
+                "Press " + WaiterOption.CHANGE_THE_MENU.value + " to change the menu.\n");
     }
+
+    @Override
+    public void showWaiterOptionsForTheMenu() {
+        print(
+              "Press " + WaiterOption.ADD_CONSUMABLE.value + " to add a consumable to the menu.\n" +
+              "Press " + WaiterOption.REMOVE_CONSUMABLE.value + " to remove a consumable from the menu.\n" +
+              "Press " + WaiterOption.BACK_TO_MAIN_WAITER_MENU.value + " to return to the main menu."
+        );
+    }
+
 
     @Override
     public void showChefOptions() {
         print(
                 "Press " + ChefOption.LOGOUT.value + " for logout.\n" +
-                "Press " + ChefOption.OPTION_2.value + " for ...");
+                "Press " + ChefOption.SEE_NEW_ORDERS.value + " to see all new orders.\n" +
+                "Press " + ChefOption.CHANGE_ORDER_STATUS.value + " to change order status.");
     }
 
     @Override

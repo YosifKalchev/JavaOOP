@@ -21,7 +21,7 @@ public class UserRepository {
     private UserRepository() {
         users = new ArrayList<>();
         users.add(new Waiter("Waiter", "waiter"));
-        users.add(new Chef("Manchev", "manchev"));
+        users.add(new Chef("Tokev", "tokev"));
         users.add(new Chef ("Nikolchev", "nikolchev"));
     }
 
