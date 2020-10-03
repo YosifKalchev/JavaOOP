@@ -25,7 +25,7 @@ public class LoginService {
     /**
      * Checks if user with such username exists and compare its password with the one provided.
      * Logged username is assigned to the variable loggedUser.
-     * @param password password for the provided eMail.
+     * @param password password for the provided username.
      * @return true if user exists and password matches and false otherwise.
      */
 

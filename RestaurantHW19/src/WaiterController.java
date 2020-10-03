@@ -21,39 +21,45 @@ public class WaiterController implements Controller {
     @Override
     public void startProgram() {
         System.out.print("You are now logged as an WAITER. Choose an option:\n");
+
+        startAdminMenu();
+
+
+            }
+
+    public void startAdminMenu() {
         WaiterOption chosenOption = null;
         while (chosenOption != WaiterOption.LOGOUT) {
             input.showWaiterOptions();
             chosenOption = input.getWaiterOptionFromUser();
             switch (chosenOption) {
-                case LOGOUT: logoutOptionChosen(); break;
-                case CREATE_ORDER: createOrderOptionChosen(); break;
-                case CHANGE_ORDER_STATUS: changeOrderStatusOptionChosen(); break;
+                case LOGOUT:
+                    System.out.println("Option 1");logoutOptionChosen(); break;
+                case CREATE_ORDER:
+                    System.out.println("Option 2");createOrderOptionChosen(); break;
+                case CHANGE_ORDER_STATUS:
+                    System.out.println("Option 3");changeOrderStatusOptionChosen(); break;
                 case SEE_ALL_ACTIVE_ORDERS: seeAllActiveOrdersOptionChosen(); break;
                 case SEE_ORDER_HISTORY: seeOrderHistoryOptionChosen(); break;
                 case SEE_THE_MENU: seeTheMenuOptionChosen(); break;
                 case CHANGE_THE_MENU: changeTheMenuOptionChosen(); break;
-
-            }
-        }
+    }
+}
     }
 
     private void changeTheMenuOptionChosen() {
-        WaiterOption chosenOption = WaiterOption.CHANGE_THE_MENU;
-        while (chosenOption != WaiterOption.LOGOUT) {
+        WaiterOption chosenOption = null;
+        while (chosenOption != WaiterOption.BACK_TO_MAIN_WAITER_MENU) {
             input.showWaiterOptionsForTheMenu();
             chosenOption = input.getWaiterOptionFromUser();
             switch (chosenOption) {
                 case ADD_CONSUMABLE: addConsumableOptionChosen(); break;
-                case REMOVE_CONSUMABLE: removeConsumableOptionChosen(); break;
-                case BACK_TO_MAIN_WAITER_MENU: backToMainWaiterMenuOptionChosen(); break;
+                case REMOVE_CONSUMABLE: ;removeConsumableOptionChosen(); break;
+                case BACK_TO_MAIN_WAITER_MENU: startProgram(); break;
             }
         }
     }
 
-    private void backToMainWaiterMenuOptionChosen() {
-        //// TODO: 30.9.2020 г. Fix this method to return to main Waiter menu! 
-    }
 
     private void removeConsumableOptionChosen() {
 

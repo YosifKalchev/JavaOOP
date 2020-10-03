@@ -11,7 +11,7 @@ public enum WaiterOption {
     CHANGE_THE_MENU (7),
     ADD_CONSUMABLE (1),
     REMOVE_CONSUMABLE (2),
-    BACK_TO_MAIN_WAITER_MENU (3);
+    BACK_TO_MAIN_WAITER_MENU (11);
 
     public int value;
 

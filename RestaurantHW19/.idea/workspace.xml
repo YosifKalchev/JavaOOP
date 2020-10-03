@@ -20,27 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="559f09fb-72f6-4ffc-8ed9-cf820eceee70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/constants/AdditionalOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/ChefController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/ChefController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/ChefController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/ChefController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/Console.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/Input.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/constants/ChefOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/constants/ChefOption.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/constants/WaiterOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/constants/WaiterOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Consumable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Consumable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Drink.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Drink.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Meal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Meal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Repositories/ConsumableRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Repositories/ConsumableRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChefController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChefController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WaiterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WaiterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/WaiterOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/WaiterOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataBase/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataBase/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataBase/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataBase/Meal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataBase/Repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataBase/Repositories/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -80,6 +70,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunManager">
@@ -124,22 +115,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="67" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1601495096526" />
-    <state width="1323" height="261" key="GridCell.Tab.0.bottom" timestamp="1601495879121">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1601754313284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="261" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601495879121" />
-    <state width="1323" height="261" key="GridCell.Tab.0.center" timestamp="1601495879121">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601754313284" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1601754313284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="261" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601495879121" />
-    <state width="1323" height="261" key="GridCell.Tab.0.left" timestamp="1601495879121">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601754313284" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1601754313283">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="261" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601495879121" />
-    <state width="1323" height="261" key="GridCell.Tab.0.right" timestamp="1601495879121">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601754313283" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1601754313284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="261" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601495879121" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601754313284" />
     <state x="274" y="0" key="new project wizard" timestamp="1601203715416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

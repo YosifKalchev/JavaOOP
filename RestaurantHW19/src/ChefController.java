@@ -14,7 +14,7 @@ public class ChefController implements Controller {
     @Override
     public void startProgram() {
 
-        print("You are now logged as an CUSTOMER. Choose an option:\n");
+        print("You are now logged as an CHEF. Choose an option:\n");
         ChefOption chosenOption = null;
         while (chosenOption != ChefOption.LOGOUT) {
             input.showChefOptions();
