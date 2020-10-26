@@ -20,17 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="559f09fb-72f6-4ffc-8ed9-cf820eceee70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/constants/AdditionalOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/ChefController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/ChefController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/constants/WaiterOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/constants/WaiterOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChefController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChefController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WaiterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WaiterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/WaiterOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/WaiterOption.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,26 +101,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="436" y="183" key="#Notifications" timestamp="1601822820182">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="436" y="183" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1601822820182" />
     <state x="488" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1601495096526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="67" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1601495096526" />
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1601754313284">
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602190045588">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601754313284" />
-    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1601754313284">
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1602190045588" />
+    <state width="1323" height="54" key="GridCell.Tab.0.bottom" timestamp="1601757319320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601754313284" />
-    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1601754313283">
+    <state width="1323" height="54" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601757319320" />
+    <state width="1323" height="54" key="GridCell.Tab.0.center" timestamp="1601757319320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601754313283" />
-    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1601754313284">
+    <state width="1323" height="54" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601757319320" />
+    <state width="1323" height="54" key="GridCell.Tab.0.left" timestamp="1601757319320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601754313284" />
+    <state width="1323" height="54" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601757319320" />
+    <state width="1323" height="54" key="GridCell.Tab.0.right" timestamp="1601757319320">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="54" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601757319320" />
     <state x="274" y="0" key="new project wizard" timestamp="1601203715416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
