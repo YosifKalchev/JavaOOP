@@ -1,18 +1,18 @@
 package shapes;
 
 public class Circle implements Shape {
-    private int radius;
+    private final int radius;
 
     public Circle(int radius) {
         this.radius = radius;
     }
 
-    public int findDiameter() {
+    public int findDiameter() { //ok
         return exists() ? 2 * radius : 0;
     }
 
     @Override
-    public double calculateArea() {
+    public double calculateArea() { //ok
 
         return exists() ? Math.PI * radius * radius : 0;
     }

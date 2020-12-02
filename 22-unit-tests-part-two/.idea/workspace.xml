@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shapes/Rectangular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Rectangular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/shapes/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/CircleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -67,7 +64,7 @@
       <recent name="highway" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CircleTest.testFindDiameterWhenRadiusIsZeroThanReturnZero">
+  <component name="RunManager" selected="JUnit.CircleTest">
     <configuration name="CarTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -79,6 +76,53 @@
       <option name="PACKAGE_NAME" value="highway.vehicle" />
       <option name="MAIN_CLASS_NAME" value="highway.vehicle.CarTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircleTest.testCalculateAreaWhenRadiusIsNegativeThanReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
+      <option name="METHOD_NAME" value="testCalculateAreaWhenRadiusIsNegativeThanReturnZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircleTest.testCalculateAreaWhenRadiusIsPositiveThanReturnPositiveNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
+      <option name="METHOD_NAME" value="testCalculateAreaWhenRadiusIsPositiveThanReturnPositiveNumber" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,37 +159,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.TriangleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TriangleTest.testIsIsoscelesWhenAllSidesAreEqualThenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.TriangleTest" />
-      <option name="METHOD_NAME" value="testIsIsoscelesWhenAllSidesAreEqualThenTrue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TriangleTest.testIsIsoscelesWhenOtherTwoSidesAreEqualThenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -164,10 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CircleTest" />
+        <item itemvalue="JUnit.CircleTest.testCalculateAreaWhenRadiusIsNegativeThanReturnZero" />
+        <item itemvalue="JUnit.CircleTest.testCalculateAreaWhenRadiusIsPositiveThanReturnPositiveNumber" />
         <item itemvalue="JUnit.CircleTest.testFindDiameterWhenRadiusIsZeroThanReturnZero" />
         <item itemvalue="JUnit.TriangleTest.testIsIsoscelesWhenOtherTwoSidesAreEqualThenTrue" />
-        <item itemvalue="JUnit.TriangleTest.testIsIsoscelesWhenAllSidesAreEqualThenTrue" />
-        <item itemvalue="JUnit.TriangleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,55 +207,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="163" y="0" key="#Project_Structure" timestamp="1605381721214">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1605381721214" />
-    <state x="-154" y="189" width="1349" height="733" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603212773988">
-      <screen x="0" y="0" width="1536" height="920" />
-    </state>
-    <state x="-154" y="189" width="1349" height="733" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.920@0.0.1536.920" timestamp="1603212773988" />
-    <state x="575" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1603216857638">
-      <screen x="0" y="0" width="1536" height="920" />
-    </state>
-    <state x="575" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1536.920@0.0.1536.920" timestamp="1603216857638" />
-    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606856220571">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1606856220571" />
-    <state x="553" y="330" width="430" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603217586456">
-      <screen x="0" y="0" width="1536" height="920" />
-    </state>
-    <state x="553" y="330" width="430" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.920@0.0.1536.920" timestamp="1603217586456" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605381682521">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605381682521" />
-    <state width="1493" height="242" key="GridCell.Tab.0.bottom" timestamp="1603217792801">
-      <screen x="0" y="0" width="1536" height="920" />
-    </state>
-    <state width="1493" height="242" key="GridCell.Tab.0.bottom/0.0.1536.920@0.0.1536.920" timestamp="1603217792801" />
-    <state width="1493" height="242" key="GridCell.Tab.0.center" timestamp="1603217792801">
-      <screen x="0" y="0" width="1536" height="920" />
-    </state>
-    <state width="1493" height="242" key="GridCell.Tab.0.center/0.0.1536.920@0.0.1536.920" timestamp="1603217792801" />
-    <state width="1493" height="242" key="GridCell.Tab.0.left" timestamp="1603217792801">
-      <screen x="0" y="0" width="1536" height="920" />
-    </state>
-    <state width="1493" height="242" key="GridCell.Tab.0.left/0.0.1536.920@0.0.1536.920" timestamp="1603217792801" />
-    <state width="1493" height="242" key="GridCell.Tab.0.right" timestamp="1603217792801">
-      <screen x="0" y="0" width="1536" height="920" />
-    </state>
-    <state width="1493" height="242" key="GridCell.Tab.0.right/0.0.1536.920@0.0.1536.920" timestamp="1603217792801" />
-    <state x="283" y="0" width="998" height="708" key="SettingsEditor" timestamp="1606856305672">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="283" y="0" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606856305672" />
-    <state x="498" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603208911626">
-      <screen x="0" y="0" width="1536" height="920" />
-    </state>
-    <state x="498" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.920@0.0.1536.920" timestamp="1603208911626" />
   </component>
 </project>
