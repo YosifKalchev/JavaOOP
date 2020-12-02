@@ -10,7 +10,8 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, 5);
         double expected = Math.sqrt((4 * 4) + (5 * 5));
         double actual = rectangle.calculateDiagonal();
-        Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
+
+        Assert.assertEquals("The diagonal calculation is wrong", expected, actual, 0.0001);
     }
 
     @Test
@@ -18,6 +19,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, -5);
         double expected = 0;
         double actual = rectangle.calculateDiagonal();
+
         Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
     }
 
@@ -26,6 +28,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, 0);
         double expected = 0;
         double actual = rectangle.calculateDiagonal();
+
         Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
     }
 
@@ -34,6 +37,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, 0);
         double expected = 0;
         double actual = rectangle.calculateDiagonal();
+
         Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
     }
 
@@ -42,6 +46,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, 5);
         double expected = 0;
         double actual = rectangle.calculateDiagonal();
+
         Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
     }
 
@@ -50,6 +55,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, 0);
         double expected = 0;
         double actual = rectangle.calculateDiagonal();
+
         Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
     }
 
@@ -58,6 +64,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, -5);
         double expected = 0;
         double actual = rectangle.calculateDiagonal();
+
         Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
     }
 
@@ -66,6 +73,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, -5);
         double expected = 0;
         double actual = rectangle.calculateDiagonal();
+
         Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
     }
 
@@ -74,6 +82,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, 5);
         double expected = 0;
         double actual = rectangle.calculateDiagonal();
+
         Assert.assertEquals("The diagonal value is not expected", expected, actual, 0.0001);
     }
 
@@ -82,7 +91,8 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, 5);
         double expected = 4 * 5;
         double actual = rectangle.calculateArea();
-        Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
+
+        Assert.assertEquals("The area calculation is wrong", expected, actual, 0.0001);
     }
 
     @Test
@@ -90,6 +100,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, -5);
         double expected = 0;
         double actual = rectangle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
     }
 
@@ -98,6 +109,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, 0);
         double expected = 0;
         double actual = rectangle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
     }
 
@@ -106,6 +118,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, 0);
         double expected = 0;
         double actual = rectangle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
     }
 
@@ -114,6 +127,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, 5);
         double expected = 0;
         double actual = rectangle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
     }
 
@@ -122,6 +136,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, 0);
         double expected = 0;
         double actual = rectangle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
     }
 
@@ -130,6 +145,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, -5);
         double expected = 0;
         double actual = rectangle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
     }
 
@@ -138,6 +154,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, -5);
         double expected = 0;
         double actual = rectangle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
     }
 
@@ -146,6 +163,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, 5);
         double expected = 0;
         double actual = rectangle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.0001);
     }
 
@@ -154,7 +172,8 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, 5);
         double expected = 2 * ( 4 + 5);
         double actual = rectangle.calculatePerimeter();
-        Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
+
+        Assert.assertEquals("The perimeter calculation is wrong", expected, actual, 0.0001);
     }
 
     @Test
@@ -162,6 +181,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, -5);
         double expected = 0;
         double actual = rectangle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
     }
 
@@ -170,6 +190,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, 0);
         double expected = 0;
         double actual = rectangle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
     }
 
@@ -178,6 +199,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, 0);
         double expected = 0;
         double actual = rectangle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
     }
 
@@ -186,6 +208,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, 5);
         double expected = 0;
         double actual = rectangle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
     }
 
@@ -194,6 +217,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, 0);
         double expected = 0;
         double actual = rectangle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
     }
 
@@ -202,6 +226,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(0, -5);
         double expected = 0;
         double actual = rectangle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
     }
 
@@ -210,6 +235,7 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(4, -5);
         double expected = 0;
         double actual = rectangle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
     }
 
@@ -218,18 +244,21 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(-4, 5);
         double expected = 0;
         double actual = rectangle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.0001);
     }
 
     @Test
     public void testIsSquareWhenSidesAreEqualThanReturnTrue() {
         Rectangle rectangle = new Rectangle(4, 4);
+
         Assert.assertTrue("The shape should be a rectangle", rectangle.isSquare());
     }
 
     @Test
     public void testIsSquareWhenSidesAreNotEqualThanReturnFalse() {
         Rectangle rectangle = new Rectangle(4, 5);
+
         Assert.assertFalse("The shape should not be a rectangle", rectangle.isSquare());
     }
 }

@@ -12,6 +12,7 @@ public class CircleTest {
         Circle circle = new Circle(0);
         double expected = 0.0;
         double actual = circle.findDiameter();
+
         assertEquals("The radius value is not expected", expected, actual, 0.001);
     }
 
@@ -20,7 +21,8 @@ public class CircleTest {
         Circle circle = new Circle(5);
         double expected = 2 * 5;
         double actual = circle.findDiameter();
-        assertEquals("The radius value is not expected", expected, actual, 0.001);
+
+        assertEquals("The radius calculation is wrong", expected, actual, 0.001);
     }
 
     @Test
@@ -28,6 +30,7 @@ public class CircleTest {
         Circle circle = new Circle(-5);
         double expected = 0.0;
         double actual = circle.findDiameter();
+
         assertEquals("The radius value is not expected", expected, actual, 0.001);
     }
 
@@ -37,6 +40,7 @@ public class CircleTest {
         this.circle = new Circle(0);
         double expected = 0.0;
         double actual = circle.calculateArea();
+
         assertEquals("The area value is not expected", expected, actual, 0.001);
     }
 
@@ -45,7 +49,8 @@ public class CircleTest {
         this.circle = new Circle(5);
         double expected = Math.PI * 5 * 5;
         double actual = circle.calculateArea();
-        Assert.assertEquals("The area value is not expected", expected, actual, 0.001);
+
+        Assert.assertEquals("The area calculation is wrong", expected, actual, 0.001);
     }
 
     @Test
@@ -53,6 +58,7 @@ public class CircleTest {
         this.circle = new Circle(-5);
         double expected = 0;
         double actual = circle.calculateArea();
+
         Assert.assertEquals("The area value is not expected", expected, actual, 0.001);
     }
 
@@ -61,6 +67,7 @@ public class CircleTest {
         this.circle = new Circle(0);
         double expected = 0;
         double actual = circle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.001);
     }
 
@@ -69,7 +76,8 @@ public class CircleTest {
         this.circle = new Circle(5);
         double expected = 2 * Math.PI * 5;
         double actual = circle.calculatePerimeter();
-        Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.001);
+
+        Assert.assertEquals("The perimeter calculation is wrong", expected, actual, 0.001);
     }
 
     @Test
@@ -77,6 +85,7 @@ public class CircleTest {
         this.circle = new Circle(-5);
         double expected = 0;
         double actual = circle.calculatePerimeter();
+
         Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.001);
     }
 }

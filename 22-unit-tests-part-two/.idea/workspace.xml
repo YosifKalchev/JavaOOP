@@ -21,9 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shapes/Rectangular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/shapes/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/CircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/shapes/TestRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/RectangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shapes/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/RectangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shapes/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/TriangleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +66,7 @@
       <recent name="highway" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RectangleTest">
+  <component name="RunManager" selected="JUnit.TriangleTest">
     <configuration name="CarTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -77,37 +78,6 @@
       <option name="PACKAGE_NAME" value="highway.vehicle" />
       <option name="MAIN_CLASS_NAME" value="highway.vehicle.CarTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CircleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CircleTest.testCalculateAreaWhenRadiusIsNegativeThanReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
-      <option name="METHOD_NAME" value="testCalculateAreaWhenRadiusIsNegativeThanReturnZero" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,13 +145,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.TriangleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriangleTest.testCalculatePerimeterWhenSidesAreZeroThenReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.TriangleTest" />
+      <option name="METHOD_NAME" value="testCalculatePerimeterWhenSidesAreZeroThenReturnZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TriangleTest" />
+        <item itemvalue="JUnit.TriangleTest.testCalculatePerimeterWhenSidesAreZeroThenReturnZero" />
         <item itemvalue="JUnit.RectangleTest" />
         <item itemvalue="JUnit.RectangleTest.testCalculateDiagonalWhenBothSidesArePositiveThenReturnPositiveNumber" />
         <item itemvalue="JUnit.RectangleTest.testCalculateDiagonalWhenOneSideIsPositiveOtherIsZeroThenReturnZero" />
-        <item itemvalue="JUnit.CircleTest" />
-        <item itemvalue="JUnit.CircleTest.testCalculateAreaWhenRadiusIsNegativeThanReturnZero" />
       </list>
     </recent_temporary>
   </component>
@@ -207,5 +208,19 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/test/shapes/TriangleTest.java</url>
+          <line>35</line>
+          <properties class="shapes.TriangleTest" method="testCalculatePerimeterWhenOneSideIsNegativeOtherSidesNonZeroThenReturnZero">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
