@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="" />
+    <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shapes/Rectangular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Rectangular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shapes/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/CircleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +41,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1j9FnJlRkJScZ6ZGd95p2PCzbc3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,14 +56,19 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="highway" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HighwayTest.testGetTaxWhenCarAddedThenTaxIsPositive">
-    <configuration name="CarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CircleTest.testFindDiameterWhenRadiusIsZeroThanReturnZero">
+    <configuration name="CarTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
         <pattern>
@@ -48,7 +83,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HighwayTest.testGetTaxWhenCarAddedThenTaxIsPositive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CircleTest.testFindDiameterWhenRadiusIsZeroThanReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
+      <option name="METHOD_NAME" value="testFindDiameterWhenRadiusIsZeroThanReturnZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HighwayTest.testGetTaxWhenCarAddedThenTaxIsPositive" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
         <pattern>
@@ -113,11 +164,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HighwayTest.testGetTaxWhenCarAddedThenTaxIsPositive" />
-        <item itemvalue="JUnit.CarTest" />
-        <item itemvalue="JUnit.TriangleTest" />
-        <item itemvalue="JUnit.TriangleTest.testIsIsoscelesWhenAllSidesAreEqualThenTrue" />
+        <item itemvalue="JUnit.CircleTest.testFindDiameterWhenRadiusIsZeroThanReturnZero" />
         <item itemvalue="JUnit.TriangleTest.testIsIsoscelesWhenOtherTwoSidesAreEqualThenTrue" />
+        <item itemvalue="JUnit.TriangleTest.testIsIsoscelesWhenAllSidesAreEqualThenTrue" />
+        <item itemvalue="JUnit.TriangleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +182,23 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1605381721214">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1605381721214" />
     <state x="-154" y="189" width="1349" height="733" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603212773988">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
@@ -141,10 +207,18 @@
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="575" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1536.920@0.0.1536.920" timestamp="1603216857638" />
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606856220571">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1606856220571" />
     <state x="553" y="330" width="430" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603217586456">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="553" y="330" width="430" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.920@0.0.1536.920" timestamp="1603217586456" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605381682521">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605381682521" />
     <state width="1493" height="242" key="GridCell.Tab.0.bottom" timestamp="1603217792801">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
@@ -161,6 +235,10 @@
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.right/0.0.1536.920@0.0.1536.920" timestamp="1603217792801" />
+    <state x="283" y="0" width="998" height="708" key="SettingsEditor" timestamp="1606856305672">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="283" y="0" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606856305672" />
     <state x="498" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603208911626">
       <screen x="0" y="0" width="1536" height="920" />
     </state>

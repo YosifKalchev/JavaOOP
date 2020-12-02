@@ -11,7 +11,7 @@ public class Rectangular implements Shape {
 
     @Override
     public double calculateArea() {
-        return aSide * bSide;
+        return exists() ? aSide * bSide : 0;
     }
 
     @Override
@@ -19,17 +19,17 @@ public class Rectangular implements Shape {
         return exists() ? 2 * (aSide + bSide) : 0;
     }
 
-    public boolean isSquare() {
-        return aSide == bSide;
-    }
 
     public double calculateDiagonal() {
-        //we can use the Pythagorean theorem
-        return Math.sqrt((aSide * aSide) + (bSide * bSide));
+        return exists() ? Math.sqrt((aSide * aSide) + (bSide * bSide)) : 0;
     }
 
     public boolean exists() {
         return aSide > 0 && bSide > 0;
+    }
+
+    public boolean isSquare() {
+        return aSide == bSide;
     }
 
 }

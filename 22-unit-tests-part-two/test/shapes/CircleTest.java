@@ -8,6 +8,14 @@ public class CircleTest {
     private Circle circle;
 
     @Test
+    public void testFindDiameterWhenRadiusIsZeroThanReturnZero() {
+        Circle circle = new Circle(0);
+        double expected = 0.0;
+        double actual = circle.findDiameter();
+        assertEquals("The radius value is not expected", expected, actual, 0.001);
+    }
+
+    @Test
     public void testCalculateAreaWhenRadiusIsZero() {
         this.circle = new Circle(0);
         double expected = 0.0;

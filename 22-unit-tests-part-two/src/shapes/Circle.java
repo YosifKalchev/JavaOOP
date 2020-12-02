@@ -8,16 +8,22 @@ public class Circle implements Shape {
     }
 
     public int findDiameter() {
-        return 2 * radius;
+        return exists() ? 2 * radius : 0;
     }
 
     @Override
     public double calculateArea() {
-        return Math.PI * radius * radius;
+
+        return exists() ? Math.PI * radius * radius : 0;
     }
 
     @Override
     public double calculatePerimeter() {
-        return 2 * Math.PI * radius;
+
+        return exists() ? 2 * Math.PI * radius : 0;
+    }
+
+    public boolean exists() {
+        return radius > 0;
     }
 }
