@@ -8,7 +8,7 @@ public class CircleTest {
     private Circle circle;
 
     @Test
-    public void testCalculateDiameterWhenRadiusIsZeroThanReturnZero() {
+    public void testCalculateDiameterWhenRadiusIsZeroThenReturnZero() {
         Circle circle = new Circle(0);
         double expected = 0.0;
         double actual = circle.findDiameter();
@@ -16,7 +16,7 @@ public class CircleTest {
     }
 
     @Test
-    public void testCalculateDiameterWhenRadiusIsPositiveThanReturnPositiveNumber() {
+    public void testCalculateDiameterWhenRadiusIsPositiveThenReturnPositiveNumber() {
         Circle circle = new Circle(5);
         double expected = 2 * 5;
         double actual = circle.findDiameter();
@@ -24,7 +24,7 @@ public class CircleTest {
     }
 
     @Test
-    public void testCalculateDiameterWhenRadiusIsNegativeThanReturnZero() { //ok
+    public void testCalculateDiameterWhenRadiusIsNegativeThenReturnZero() { //ok
         Circle circle = new Circle(-5);
         double expected = 0.0;
         double actual = circle.findDiameter();
@@ -33,50 +33,50 @@ public class CircleTest {
 
 
     @Test
-    public void testCalculateAreaWhenRadiusIsZeroThanReturnZero() { //ok
+    public void testCalculateAreaWhenRadiusIsZeroThenReturnZero() { //ok
         this.circle = new Circle(0);
         double expected = 0.0;
         double actual = circle.calculateArea();
-        assertEquals("The area is not as expected", expected, actual, 0.001);
+        assertEquals("The area value is not expected", expected, actual, 0.001);
     }
 
     @Test
-    public void testCalculateAreaWhenRadiusIsPositiveThanReturnPositiveNumber() { //ok
+    public void testCalculateAreaWhenRadiusIsPositiveThenReturnPositiveNumber() { //ok
         this.circle = new Circle(5);
         double expected = Math.PI * 5 * 5;
         double actual = circle.calculateArea();
-        Assert.assertEquals("The area is not as expected", expected, actual, 0.001);
+        Assert.assertEquals("The area value is not expected", expected, actual, 0.001);
     }
 
     @Test
-    public void testCalculateAreaWhenRadiusIsNegativeThanReturnZero() {
+    public void testCalculateAreaWhenRadiusIsNegativeThenReturnZero() {
         this.circle = new Circle(-5);
         double expected = 0;
         double actual = circle.calculateArea();
-        Assert.assertEquals("The area is not as expected", expected, actual, 0.001);
+        Assert.assertEquals("The area value is not expected", expected, actual, 0.001);
     }
 
     @Test
-    public void testCalculatePerimeterWhenRadiusIsZeroThanReturnZero() {
+    public void testCalculatePerimeterWhenRadiusIsZeroThenReturnZero() {
         this.circle = new Circle(0);
         double expected = 0;
         double actual = circle.calculatePerimeter();
-        Assert.assertEquals("The perimeter is not as expected", expected, actual, 0.001);
+        Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.001);
     }
 
     @Test
-    public void testCalculatePerimeterWhenRadiusIsPositiveThanReturnPositiveNumber() {
+    public void testCalculatePerimeterWhenRadiusIsPositiveThenReturnPositiveNumber() {
         this.circle = new Circle(5);
         double expected = 2 * Math.PI * 5;
         double actual = circle.calculatePerimeter();
-        Assert.assertEquals("The perimeter is not as expected", expected, actual, 0.001);
+        Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.001);
     }
 
     @Test
-    public void testCalculatePerimeterWhenRadiusIsNegativeThanReturnZero() {
+    public void testCalculatePerimeterWhenRadiusIsNegativeThenReturnZero() {
         this.circle = new Circle(-5);
         double expected = 0;
         double actual = circle.calculatePerimeter();
-        Assert.assertEquals("The perimeter is not as expected", expected, actual, 0.001);
+        Assert.assertEquals("The perimeter value is not expected", expected, actual, 0.001);
     }
 }

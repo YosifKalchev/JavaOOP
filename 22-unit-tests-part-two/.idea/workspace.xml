@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shapes/Rectangular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/shapes/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/CircleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shapes/TestRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/RectangleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +65,7 @@
       <recent name="highway" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CircleTest">
+  <component name="RunManager" selected="JUnit.RectangleTest">
     <configuration name="CarTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -111,38 +112,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CircleTest.testCalculateAreaWhenRadiusIsPositiveThanReturnPositiveNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
-      <option name="METHOD_NAME" value="testCalculateAreaWhenRadiusIsPositiveThanReturnPositiveNumber" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CircleTest.testFindDiameterWhenRadiusIsZeroThanReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
-      <option name="METHOD_NAME" value="testFindDiameterWhenRadiusIsZeroThanReturnZero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HighwayTest.testGetTaxWhenCarAddedThenTaxIsPositive" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -159,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleTest.testIsIsoscelesWhenOtherTwoSidesAreEqualThenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
         <pattern>
@@ -168,8 +137,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.TriangleTest" />
-      <option name="METHOD_NAME" value="testIsIsoscelesWhenOtherTwoSidesAreEqualThenTrue" />
+      <option name="MAIN_CLASS_NAME" value="shapes.RectangleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RectangleTest.testCalculateDiagonalWhenBothSidesArePositiveThenReturnPositiveNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.RectangleTest" />
+      <option name="METHOD_NAME" value="testCalculateDiagonalWhenBothSidesArePositiveThenReturnPositiveNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RectangleTest.testCalculateDiagonalWhenOneSideIsPositiveOtherIsZeroThenReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.RectangleTest" />
+      <option name="METHOD_NAME" value="testCalculateDiagonalWhenOneSideIsPositiveOtherIsZeroThenReturnZero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RectangleTest" />
+        <item itemvalue="JUnit.RectangleTest.testCalculateDiagonalWhenBothSidesArePositiveThenReturnPositiveNumber" />
+        <item itemvalue="JUnit.RectangleTest.testCalculateDiagonalWhenOneSideIsPositiveOtherIsZeroThenReturnZero" />
         <item itemvalue="JUnit.CircleTest" />
         <item itemvalue="JUnit.CircleTest.testCalculateAreaWhenRadiusIsNegativeThanReturnZero" />
-        <item itemvalue="JUnit.CircleTest.testCalculateAreaWhenRadiusIsPositiveThanReturnPositiveNumber" />
-        <item itemvalue="JUnit.CircleTest.testFindDiameterWhenRadiusIsZeroThanReturnZero" />
-        <item itemvalue="JUnit.TriangleTest.testIsIsoscelesWhenOtherTwoSidesAreEqualThenTrue" />
       </list>
     </recent_temporary>
   </component>

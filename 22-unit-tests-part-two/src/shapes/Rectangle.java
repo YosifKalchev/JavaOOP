@@ -1,12 +1,17 @@
 package shapes;
 
-public class Rectangular implements Shape {
-    private int aSide;
-    private int bSide;
+public class Rectangle implements Shape {
+    private final int aSide;
+    private final int bSide;
 
-    public Rectangular(int aSide, int bSide) {
+    public Rectangle(int aSide, int bSide) {
         this.aSide = aSide;
         this.bSide = bSide;
+    }
+
+
+    public double calculateDiagonal() {
+        return exists() ? Math.sqrt((aSide * aSide) + (bSide * bSide)) : 0;
     }
 
     @Override
@@ -20,16 +25,15 @@ public class Rectangular implements Shape {
     }
 
 
-    public double calculateDiagonal() {
-        return exists() ? Math.sqrt((aSide * aSide) + (bSide * bSide)) : 0;
-    }
-
     public boolean exists() {
+
         return aSide > 0 && bSide > 0;
     }
 
     public boolean isSquare() {
+
         return aSide == bSide;
+
     }
 
 }
