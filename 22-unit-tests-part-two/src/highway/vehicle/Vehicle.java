@@ -1,19 +1,22 @@
 package highway.vehicle;
 
 public interface Vehicle {
+
     int getSpeed();
 
     int getHorsepower();
 
     void start();
 
+    void stop();
+
     int increaseSpeed(int kph);
 
     int decreaseSpeed(int kph);
 
-    void stop();
+    double getTax();
 
     boolean doesItMove();
 
-    double getTax();
+    boolean exists();
 }

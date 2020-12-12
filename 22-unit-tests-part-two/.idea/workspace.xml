@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/highway/vehicle/MotorbikeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shapes/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/shapes/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/CircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/shapes/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/RectangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/shapes/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/shapes/TriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Motorbike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Motorbike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/highway/vehicle/VehicleBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/VehicleBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/highway/vehicle/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/highway/vehicle/CarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +68,7 @@
       <recent name="highway" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TriangleTest">
+  <component name="RunManager" selected="JUnit.MotorbikeTest">
     <configuration name="CarTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -78,6 +80,22 @@
       <option name="PACKAGE_NAME" value="highway.vehicle" />
       <option name="MAIN_CLASS_NAME" value="highway.vehicle.CarTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarTest.testGetTaxWhenHorsepowerIsNegativeThenReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="highway.vehicle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="highway.vehicle" />
+      <option name="MAIN_CLASS_NAME" value="highway.vehicle.CarTest" />
+      <option name="METHOD_NAME" value="testGetTaxWhenHorsepowerIsNegativeThenReturnZero" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,6 +116,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MotorbikeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="highway.vehicle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="highway.vehicle" />
+      <option name="MAIN_CLASS_NAME" value="highway.vehicle.MotorbikeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -109,38 +142,6 @@
       <option name="PACKAGE_NAME" value="shapes" />
       <option name="MAIN_CLASS_NAME" value="shapes.RectangleTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangleTest.testCalculateDiagonalWhenBothSidesArePositiveThenReturnPositiveNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.RectangleTest" />
-      <option name="METHOD_NAME" value="testCalculateDiagonalWhenBothSidesArePositiveThenReturnPositiveNumber" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangleTest.testCalculateDiagonalWhenOneSideIsPositiveOtherIsZeroThenReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.RectangleTest" />
-      <option name="METHOD_NAME" value="testCalculateDiagonalWhenOneSideIsPositiveOtherIsZeroThenReturnZero" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MotorbikeTest" />
+        <item itemvalue="JUnit.CarTest.testGetTaxWhenHorsepowerIsNegativeThenReturnZero" />
         <item itemvalue="JUnit.TriangleTest" />
         <item itemvalue="JUnit.TriangleTest.testCalculatePerimeterWhenSidesAreZeroThenReturnZero" />
         <item itemvalue="JUnit.RectangleTest" />
-        <item itemvalue="JUnit.RectangleTest.testCalculateDiagonalWhenBothSidesArePositiveThenReturnPositiveNumber" />
-        <item itemvalue="JUnit.RectangleTest.testCalculateDiagonalWhenOneSideIsPositiveOtherIsZeroThenReturnZero" />
       </list>
     </recent_temporary>
   </component>

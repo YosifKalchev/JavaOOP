@@ -2,21 +2,19 @@ package highway.vehicle;
 
 public class Motorbike extends VehicleBase {
 
-    private boolean isHelmetOn;
 
     public Motorbike(String registrationNumber, int horsepower) {
         super(registrationNumber, horsepower);
-        this.isHelmetOn = false;
     }
 
     @Override
     public void start() {
-        this.isHelmetOn = true;
-        this.speed = 20;
+        this.speed = 10;
     }
 
     @Override
     public void stop() {
+
         this.speed = 0;
     }
 
@@ -27,6 +25,7 @@ public class Motorbike extends VehicleBase {
 
     @Override
     public double getTax() {
-        return getHorsepower() * 0.1;
+
+        return exists() ? getHorsepower() * 0.1 : 0;
     }
 }
