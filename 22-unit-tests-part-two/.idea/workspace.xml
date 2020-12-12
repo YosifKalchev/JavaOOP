@@ -20,14 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/highway/vehicle/MotorbikeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/highway/Highway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/Highway.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Motorbike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Motorbike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/highway/vehicle/VehicleBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/VehicleBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/highway/vehicle/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/highway/vehicle/CarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestaurantHW19/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

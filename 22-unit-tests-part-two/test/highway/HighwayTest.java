@@ -16,7 +16,7 @@ public class HighwayTest {
 
     @Test
     public void testGetTaxWhenCarAddedThenTaxIsPositive() {
-        Car car = new Car("asd", 200);
+        Car car = new Car("RegNumber", 200);
         highway.addNewVehicle(car);
         double expected = 40;
 

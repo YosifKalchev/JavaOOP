@@ -19,4 +19,8 @@ public interface Vehicle {
     boolean doesItMove();
 
     boolean exists();
+
+    boolean isOnHighway();
+
+    void setIsOnHighway(boolean isOnHighway);
 }

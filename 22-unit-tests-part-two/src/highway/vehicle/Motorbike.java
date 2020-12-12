@@ -28,4 +28,9 @@ public class Motorbike extends VehicleBase {
 
         return exists() ? getHorsepower() * 0.1 : 0;
     }
+
+    @Override
+    public boolean isOnHighway() {
+        return false;
+    }
 }

@@ -6,6 +6,7 @@ public class Car extends VehicleBase {
 
         super(registrationNumber, horsepower);
 
+
     }
 
     @Override
@@ -28,6 +29,11 @@ public class Car extends VehicleBase {
     public double getTax() {
 
         return exists() ? getHorsepower() * 0.2 : 0;
+    }
+
+    @Override
+    public boolean isOnHighway() {
+        return false;
     }
 
 }
