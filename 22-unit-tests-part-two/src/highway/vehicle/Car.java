@@ -31,9 +31,5 @@ public class Car extends VehicleBase {
         return exists() ? getHorsepower() * 0.2 : 0;
     }
 
-    @Override
-    public boolean isOnHighway() {
-        return false;
-    }
 
 }

@@ -15,18 +15,24 @@ public class Highway {
         this.vehiclesOnHighway = new ArrayList<>();
     }
 
+    public double getTaxGathered() {
+        return taxGathered;
+    }
+
+    public int getNumberOfVehicles() {
+        return this.vehiclesOnHighway.size();
+    }
+
+
     public void addNewVehicle(Vehicle vehicle) {
         if (vehicle.isOnHighway()) {
             System.out.println("This vehicle is already on the highway.");
         } else {
+
             this.vehiclesOnHighway.add(vehicle);
             taxGathered += vehicle.getTax();
             vehicle.setIsOnHighway(true);
         }
-    }
-
-    public double getTaxGathered() {
-        return taxGathered;
     }
 
     public void removeVehicle(Vehicle vehicle) {
@@ -37,9 +43,5 @@ public class Highway {
             vehicle.setIsOnHighway(false);
         }
     }
-
-    public int getNumberOfVehicles() {
-        return this.vehiclesOnHighway.size();
-    }
-
+    
 }

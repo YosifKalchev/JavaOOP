@@ -24,8 +24,7 @@
       <change beforePath="$PROJECT_DIR$/src/highway/Highway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/Highway.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Motorbike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Motorbike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/highway/vehicle/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/highway/vehicle/VehicleBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/vehicle/VehicleBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/highway/HighwayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/highway/HighwayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,14 @@
       <recent name="highway" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MotorbikeTest">
+  <component name="RunManager" selected="JUnit.HighwayTest.testGetTaxGatheredWhenThereAreNoVehiclesOnTheHighwayThenReturnZero">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="22-unit-tests-part-two" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CarTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -82,17 +88,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CarTest.testGetTaxWhenHorsepowerIsNegativeThenReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HighwayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="highway.vehicle.*" />
+          <option name="PATTERN" value="highway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="highway.vehicle" />
-      <option name="MAIN_CLASS_NAME" value="highway.vehicle.CarTest" />
-      <option name="METHOD_NAME" value="testGetTaxWhenHorsepowerIsNegativeThenReturnZero" />
+      <option name="PACKAGE_NAME" value="highway" />
+      <option name="MAIN_CLASS_NAME" value="highway.HighwayTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HighwayTest.testGetIsOnHighwayWhenAlreadyOnItThenReturnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="highway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="highway" />
+      <option name="MAIN_CLASS_NAME" value="highway.HighwayTest" />
+      <option name="METHOD_NAME" value="testGetIsOnHighwayWhenAlreadyOnItThenReturnFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HighwayTest.testGetTaxGatheredWhenThereAreNoVehiclesOnTheHighwayThenReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="highway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="highway" />
+      <option name="MAIN_CLASS_NAME" value="highway.HighwayTest" />
+      <option name="METHOD_NAME" value="testGetTaxGatheredWhenThereAreNoVehiclesOnTheHighwayThenReturnZero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,62 +151,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MotorbikeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HighwayTest.testRemoveVehicleWhenVehicleIsRemovedThenReturnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="highway.vehicle.*" />
+          <option name="PATTERN" value="highway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="highway.vehicle" />
-      <option name="MAIN_CLASS_NAME" value="highway.vehicle.MotorbikeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.RectangleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.TriangleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TriangleTest.testCalculatePerimeterWhenSidesAreZeroThenReturnZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.TriangleTest" />
-      <option name="METHOD_NAME" value="testCalculatePerimeterWhenSidesAreZeroThenReturnZero" />
+      <option name="PACKAGE_NAME" value="highway" />
+      <option name="MAIN_CLASS_NAME" value="highway.HighwayTest" />
+      <option name="METHOD_NAME" value="testRemoveVehicleWhenVehicleIsRemovedThenReturnFalse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MotorbikeTest" />
-        <item itemvalue="JUnit.CarTest.testGetTaxWhenHorsepowerIsNegativeThenReturnZero" />
-        <item itemvalue="JUnit.TriangleTest" />
-        <item itemvalue="JUnit.TriangleTest.testCalculatePerimeterWhenSidesAreZeroThenReturnZero" />
-        <item itemvalue="JUnit.RectangleTest" />
+        <item itemvalue="JUnit.HighwayTest.testGetTaxGatheredWhenThereAreNoVehiclesOnTheHighwayThenReturnZero" />
+        <item itemvalue="JUnit.HighwayTest" />
+        <item itemvalue="JUnit.HighwayTest.testRemoveVehicleWhenVehicleIsRemovedThenReturnFalse" />
+        <item itemvalue="JUnit.HighwayTest.testGetIsOnHighwayWhenAlreadyOnItThenReturnFalse" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
