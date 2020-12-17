@@ -16,7 +16,7 @@ public class UserRepository {
 
     private UserRepository() {
         users = new ArrayList<>();
-        users.add(new Admin("admin", "admin@", "admin"));
+        users.add(new Hairstyler("hstyler", "hstyler@", "hstyler", 5, specialisation));
         users.add(new Customer("cus", "cus@", "cus"));
         users.add(new Customer("cus2", "cus2@", "cus2"));
     }

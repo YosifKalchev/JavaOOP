@@ -1,4 +1,4 @@
-import constants.AdminOption;
+import constants.HairstylerOption;
 import constants.CustomerOption;
 
 public interface Input {
@@ -12,13 +12,13 @@ public interface Input {
 
     void showErrorWrongLoginInput();
 
-    void showAdminOptions();
+    void showHairStylerOption();
 
     void showCustomerOptions();
 
     void showLoginMessage();
 
-    AdminOption getAdminOptionFromUser();
+    HairstylerOption getHairstylerOptionFromUser();
 
     CustomerOption getCustomerOptionFromUser();
 }

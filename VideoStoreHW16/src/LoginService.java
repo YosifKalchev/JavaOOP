@@ -49,7 +49,7 @@ public class LoginService {
 
     public boolean isUserAdmin() {
 
-        return isUserLogged() && getLoggedUser() instanceof Admin;
+        return isUserLogged() && getLoggedUser() instanceof Hairstyler;
     }
 
     public void logout() {

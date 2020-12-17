@@ -7,7 +7,7 @@ import java.util.Collection;
 
 public class Highway {
 
-    private Collection<Vehicle> vehiclesOnHighway;
+    private final Collection<Vehicle> vehiclesOnHighway;
     private double taxGathered;
 
     public Highway() {
@@ -43,5 +43,5 @@ public class Highway {
             vehicle.setIsOnHighway(false);
         }
     }
-    
+
 }

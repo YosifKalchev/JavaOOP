@@ -1,6 +1,6 @@
 package constants;
 
-public enum AdminOption {
+public enum HairstylerOption {
 
     LOGOUT (1),
     SHOW_ALL_TAPES(2),
@@ -8,7 +8,7 @@ public enum AdminOption {
     CREATE_NEW_CUSTOMER(4);
 
     private final int value;
-    AdminOption(int value) {
+    HairstylerOption(int value) {
         this.value = value;
     }
 
@@ -16,9 +16,9 @@ public enum AdminOption {
         return value;
     }
 
-    public static AdminOption convertToAdminOption(int option) {
-        for (AdminOption adminOption : values()) {
-            if(option == adminOption.value) return adminOption;
+    public static HairstylerOption convertToAdminOption(int option) {
+        for (HairstylerOption hairstylerOption : values()) {
+            if(option == hairstylerOption.value) return hairstylerOption;
         }
         return null;
     }

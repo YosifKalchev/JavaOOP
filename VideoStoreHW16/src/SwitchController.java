@@ -9,7 +9,7 @@ public class SwitchController {
     private SwitchController (Input input) {
         LoginService loginService = new LoginService();
         loginController = new LoginController(input, loginService);
-        adminController = new AdminController(input, loginService);
+        adminController = new HairstyleController(input, loginService);
         customerController = new CustomerController(input, loginService);
     }
 

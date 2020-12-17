@@ -1,4 +1,4 @@
-import constants.AdminOption;
+import constants.HairstylerOption;
 import constants.CustomerOption;
 import java.util.Scanner;
 
@@ -44,13 +44,13 @@ public class Console implements Input {
     }
 
     @Override
-    public AdminOption getAdminOptionFromUser() {
+    public HairstylerOption getHairstylerOptionFromUser() {
         int userInput;
         do {
             print("Enter a valid admin option:");
             userInput = getNumberFromUser();
-    }  while (AdminOption.convertToAdminOption(userInput) == null);
-        return AdminOption.convertToAdminOption(userInput);
+    }  while (HairstylerOption.convertToAdminOption(userInput) == null);
+        return HairstylerOption.convertToAdminOption(userInput);
     }
 
     @Override
@@ -70,12 +70,12 @@ public class Console implements Input {
     }
 
     @Override
-    public void showAdminOptions() {
+    public void showHairStylerOption() {
         System.out.println(
-                "Press "+ AdminOption.LOGOUT.value() + " for logout\n" +
-                "Press "+ AdminOption.SHOW_ALL_TAPES.value() + " to show all tapes\n" +
-                "Press "+ AdminOption.SHOW_ALL_CUSTOMERS.value() + " to show all customers\n" +
-                "Press "+ AdminOption.CREATE_NEW_CUSTOMER.value() + " to create new customer\n");
+                "Press "+ HairstylerOption.LOGOUT.value() + " for logout\n" +
+                "Press "+ HairstylerOption.SHOW_ALL_TAPES.value() + " to show all tapes\n" +
+                "Press "+ HairstylerOption.SHOW_ALL_CUSTOMERS.value() + " to show all customers\n" +
+                "Press "+ HairstylerOption.CREATE_NEW_CUSTOMER.value() + " to create new customer\n");
     }
 
     @Override
