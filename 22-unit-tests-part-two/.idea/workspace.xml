@@ -20,9 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/highway/Highway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/highway/Highway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamHairdressers/FinalJavaOOP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamHairdressers/out/production/FinalJavaOOP/FinalJavaOOP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/HairSaloon.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/src/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/src/users/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/src/users/Hairdresser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
