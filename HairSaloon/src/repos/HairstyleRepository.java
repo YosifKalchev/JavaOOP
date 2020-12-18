@@ -16,11 +16,18 @@ public class HairstyleRepository {
     private final List<Hairstyle> hairstyles;
 
     private HairstyleRepository() {
+
         hairstyles = new ArrayList<>();
+
     }
 
     private void print(String text) {
         System.out.println(text);
     }
+
+    private  void addHairstyle(Hairstyle hairstyle) {
+        hairstyles.add(hairstyle);
+    }
+
 
 }

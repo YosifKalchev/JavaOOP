@@ -59,7 +59,7 @@ public class Console implements Input {
     public void showHairdresserOptions() {
         System.out.println(
                 "Press "+ HairdresserOption.LOGOUT.value() + " for logout.\n" +
-                        "Press "+ HairdresserOption.SHOW_YOUR_RATING.value() + " to show your rating\n");
+                "Press "+ HairdresserOption.SHOW_YOUR_RATING.value() + " to show your rating\n");
     }
 
     @Override
