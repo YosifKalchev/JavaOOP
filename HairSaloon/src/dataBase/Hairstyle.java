@@ -17,6 +17,10 @@ public class Hairstyle {
         this.price = price;
     }
 
+    public Hairstyle() {
+        this (null, null, 0, 0);
+    }
+
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }

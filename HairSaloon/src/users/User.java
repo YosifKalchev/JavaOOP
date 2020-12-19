@@ -5,7 +5,7 @@ public class User {
     private final String username;
     private final String eMail;
     private final String password;
-    private final Hairdresser hairdresser;
+    private Hairdresser hairdresser;
 
 
     public User(String username, String eMail, String password) {
@@ -25,5 +25,15 @@ public class User {
     }
 
     public String getPassword() { return password; }
+
+    public Hairdresser getHairdresser() {
+        return hairdresser;
+    }
+
+    public void setHairdresser(Hairdresser hairdresser) {
+        this.hairdresser = hairdresser;
+    }
+
+
 }
 

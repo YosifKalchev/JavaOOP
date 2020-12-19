@@ -1,6 +1,10 @@
 package controllers;
 
 import constants.CustomerOption;
+import dataBase.CurrentUser;
+import repos.UserRepository;
+import users.Hairdresser;
+import users.User;
 
 public class CustomerController implements Controller {
 
@@ -23,19 +27,37 @@ public class CustomerController implements Controller {
             switch (chosenOption) {
                 case LOGOUT -> logoutOptionChosen();
                 case SHOW_ALL_HAIRDRESSERS -> showAllHairStylersOptionChosen();
+                case CHOOSE_HAIRDRESSER -> choseHairdresserOptionChosen();
+                case RATE_HAIRDRESSER -> rateHairdresserOptionChosen();
+                //todo case SHOW_ALL_INCORRECT_HAIRDRESSERS ->
+                // their personal rating is lower than rating earned by customers
             }
         }
     }
 
-    private void showAllHairStylersOptionChosen() {
+
+
+    private void rateHairdresserOptionChosen() {
+        //todo create this method
     }
 
-//    private void showAllHairStylersOptionChosen() {
-//        for (ss)
-//    }
+    private void choseHairdresserOptionChosen() {
+        print("Enter the name of the hairdresser: ");
+        User loggedUser = CurrentUser.getLoggedUser();
+        String hairdresserName = input.getStringFromUser();
+        Hairdresser chosen = (Hairdresser) UserRepository.getInstance().getUserByUsername(hairdresserName);
+        if (hairdresserName != null && UserRepository.getInstance().isValid(hairdresserName)) {
+            loggedUser.setHairdresser(chosen);
+            //todo create new hairstyle with this Customer and Hairdresser.
+            //todo add it to HairstyleRepository
+        } else {
+            print("Invalid hairdresser's name. Enter a valid name:");
+        }
+    }
 
-
-
+    private void showAllHairStylersOptionChosen() {
+        UserRepository.getInstance().printAllHairdressers();
+    }
 
     private void logoutOptionChosen() {
         loginService.logout();

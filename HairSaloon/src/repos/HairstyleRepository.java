@@ -18,6 +18,7 @@ public class HairstyleRepository {
     private HairstyleRepository() {
 
         hairstyles = new ArrayList<>();
+        hairstyles.add(new Hairstyle());
 
     }
 
