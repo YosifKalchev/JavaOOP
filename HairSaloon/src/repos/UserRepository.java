@@ -4,6 +4,7 @@ import users.Customer;
 import users.Hairdresser;
 import users.User;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,18 +22,29 @@ public class UserRepository {
 
     private UserRepository() {
         users = new ArrayList<>();
-        users.add(new Hairdresser("hs1", "hs1@", "hs1",
-                Specialisations.WET, 7, 5.5));
-        users.add(new Hairdresser("hs2", "hs2@", "hs2",
-                Specialisations.CURLS, 0, 5));
-        users.add(new Hairdresser("hs3", "hs3@", "hs3",
-                Specialisations.CURLS, 4, 6));
-        users.add(new Customer("1", "1", "1"));
-        users.add(new Customer("cus1", "cus1@", "cus1"));
-        users.add(new Customer("cus2", "cus2@", "cus2"));
-        //todo fill "users" with 5 Hairdressers and 10 Customers
+        users.add(new Hairdresser("John", "John@", "John",
+                Specialisations.WET, 1, 4));
+        users.add(new Hairdresser("Simon", "Simon@", "Simon",
+                Specialisations.CURLS, 2, 7));
+        users.add(new Hairdresser("Patrick", "Patrick@", "Patrick",
+                Specialisations.MAN, 3, 6.5));
+        users.add(new Hairdresser("Joshua", "Joshua@", "Joshua",
+                Specialisations.DRY, 4, 9));
+        users.add(new Hairdresser("Ivar", "Ivar@", "Ivar",
+                Specialisations.MAN, 5, 6));
+        users.add(new Customer("client1", "client1@", "client1"));
+        users.add(new Customer("client2", "client2@", "client2"));
+        users.add(new Customer("client3", "client3@", "client3"));
+        users.add(new Customer("client4", "client4@", "client4"));
+        users.add(new Customer("client5", "client5@", "client5"));
+        users.add(new Customer("client6", "client6@", "client6"));
+        users.add(new Customer("client7", "client7@", "client7"));
+        users.add(new Customer("client8", "client8@", "client8"));
+        users.add(new Customer("client9", "client9@", "client9"));
+        users.add(new Customer("client10", "client10@", "client10"));
+
+
     }
-        //todo create a method to compare the rating earn by customers and the personal rating
 
     public User getUserByUsername(String username) {
         for (User user : users) {
@@ -67,13 +79,33 @@ public class UserRepository {
             if (user instanceof Hairdresser) {
                 System.out.println(
                       "Hairdresser: " + user.getUsername() +
-                      ", Spec: " + ((Hairdresser) user).getSpecialisation() +
+                      ", Specialisation: " + ((Hairdresser) user).getSpecialisation() +
                       ", Rating: " + ((Hairdresser) user).getRating() +
                       ", Price: " + ((Hairdresser) user).getHairstylePrice());
             }
         }
         print("");
         }
+
+    public void showAllIncorrectHairdressers() {
+
+        for (User user : users) {
+           if (user instanceof Hairdresser) {
+               double rating = HairstyleRepository.getInstance().getHairdresserRealRating((Hairdresser) user);
+               String realRating = String.format("%.2f", rating);
+
+               if (((Hairdresser) user).getRating() >
+                       HairstyleRepository.getInstance().getHairdresserRealRating((Hairdresser) user)) {
+                   print(user.getUsername() + " is a cheater. He declare a rating of: " +
+                           ((Hairdresser) user).getRating() + " but his real rating is: " +
+                           realRating);
+               }
+           }
+        } print ("");
+    }
+
+
+
 
     public boolean isValid(String hairdresserName) {
         boolean check = false;

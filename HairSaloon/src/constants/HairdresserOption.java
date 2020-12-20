@@ -3,8 +3,7 @@ package constants;
 public enum HairdresserOption {
 
     LOGOUT (1),
-    SHOW_YOUR_RATING(2),
-    SET_THE_HAIRSTYLE_PRICE(3);
+    SHOW_YOUR_RATING(2);
 
     private final int value;
     HairdresserOption(int value) {

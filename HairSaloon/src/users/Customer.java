@@ -9,7 +9,7 @@ public class Customer extends User {
         this.chosenHairdresser = null;
     }
 
-    public void setChosenHairstyler(Hairdresser chosenHairdresser) {
+    public void setChosenHairdresser(Hairdresser chosenHairdresser) {
         this.chosenHairdresser = chosenHairdresser;
     }
 }

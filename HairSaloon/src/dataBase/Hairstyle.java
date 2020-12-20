@@ -2,6 +2,7 @@ package dataBase;
 
 import users.Customer;
 import users.Hairdresser;
+import users.User;
 
 public class Hairstyle {
 
@@ -21,11 +22,12 @@ public class Hairstyle {
         this (null, null, 0, 0);
     }
 
+
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
-    public void setHairstyler(Hairdresser hairdresser) {
+    public void setHairdresser(Hairdresser hairdresser) {
         this.hairdresser = hairdresser;
     }
 
@@ -39,4 +41,25 @@ public class Hairstyle {
     public void setPrice(double price) {
         this.price = price;
     }
+
+
+    //todo delete the code below after the project is ready
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public Hairdresser getHairdresser() {
+        return hairdresser;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    //todo delete to here!!!
 }

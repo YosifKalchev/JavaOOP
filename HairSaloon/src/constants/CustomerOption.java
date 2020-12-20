@@ -5,7 +5,9 @@ public enum CustomerOption {
     LOGOUT (1),
     SHOW_ALL_HAIRDRESSERS(2),
     CHOOSE_HAIRDRESSER(3),
-    RATE_HAIRDRESSER(4);
+    RATE_HAIRDRESSER(4),
+    SHOW_ALL_INCORRECT_HAIRDRESSERS (5),
+    SHOW_ALL_HAIRSTYLES (6);
 
     private final int value;
     CustomerOption(int value) {

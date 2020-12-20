@@ -2,14 +2,18 @@ package controllers;
 
 import constants.CustomerOption;
 import dataBase.CurrentUser;
+import dataBase.Hairstyle;
+import repos.HairstyleRepository;
 import repos.UserRepository;
+import users.Customer;
 import users.Hairdresser;
-import users.User;
+
 
 public class CustomerController implements Controller {
 
     protected final LoginService loginService;
     private final Input input;
+    private Hairdresser chosenHairdresser;
 
     public CustomerController(Input input, LoginService loginService) {
         this.input = input;
@@ -19,43 +23,77 @@ public class CustomerController implements Controller {
     @Override
     public void startProgram() {
 
-        print("You are now logged as an CUSTOMER. Choose an option:\n");
+        print("You are now logged as a CUSTOMER. Choose an option:\n");
         CustomerOption chosenOption = null;
         while (chosenOption != CustomerOption.LOGOUT) {
             input.showCustomerOptions();
             chosenOption = input.getCustomerOptionFromUser();
             switch (chosenOption) {
                 case LOGOUT -> logoutOptionChosen();
-                case SHOW_ALL_HAIRDRESSERS -> showAllHairStylersOptionChosen();
+                case SHOW_ALL_HAIRDRESSERS -> showAllHairdressersOptionChosen();
                 case CHOOSE_HAIRDRESSER -> choseHairdresserOptionChosen();
                 case RATE_HAIRDRESSER -> rateHairdresserOptionChosen();
-                //todo case SHOW_ALL_INCORRECT_HAIRDRESSERS ->
-                // their personal rating is lower than rating earned by customers
+                case SHOW_ALL_INCORRECT_HAIRDRESSERS -> showAllIncorrectHairdressersOptionChosen();
+                case SHOW_ALL_HAIRSTYLES -> showAllHairstylesOptionChosen();
+
             }
         }
     }
 
-
-
-    private void rateHairdresserOptionChosen() {
-        //todo create this method
+    private void showAllHairstylesOptionChosen() {
+        HairstyleRepository.getInstance().showAllHairstyles();
     }
 
-    private void choseHairdresserOptionChosen() {
-        print("Enter the name of the hairdresser: ");
-        User loggedUser = CurrentUser.getLoggedUser();
-        String hairdresserName = input.getStringFromUser();
-        Hairdresser chosen = (Hairdresser) UserRepository.getInstance().getUserByUsername(hairdresserName);
-        if (hairdresserName != null && UserRepository.getInstance().isValid(hairdresserName)) {
-            loggedUser.setHairdresser(chosen);
-            //todo create new hairstyle with this Customer and Hairdresser.
-            //todo add it to HairstyleRepository
+    private void showAllIncorrectHairdressersOptionChosen() {
+        UserRepository.getInstance().showAllIncorrectHairdressers();
+    }
+
+    private void rateHairdresserOptionChosen() {
+        if (chosenHairdresser == null) {
+            print("You haven't chosen a hairdresser.\n");
         } else {
-            print("Invalid hairdresser's name. Enter a valid name:");
+            print("Enter a number from 1 to 5 to rate the hairdresser: ");
+            String entry = input.getStringFromUser();
+            try {
+                int chosenOption = Integer.parseInt(entry);
+                if (chosenOption > 5 || chosenOption < 1) {
+                    print("The entered number is not from 1 to 5. Try again.");
+                } else {
+                    Hairstyle hairstyle = new Hairstyle((Customer) CurrentUser.getLoggedUser(), chosenHairdresser,
+                            chosenOption, chosenHairdresser.getHairstylePrice());
+                    HairstyleRepository.getInstance().addHairstyle(hairstyle);
+                    chosenHairdresser = null;
+                }
+            }
+
+            catch(NumberFormatException ex) {
+                rateHairdresserOptionChosen();
+            }
+
+            catch (Exception exception) {
+                System.out.println("Unspecified error (not a NumberFormatException).");
+            }
         }
     }
 
-    private void showAllHairStylersOptionChosen() {
+    private void choseHairdresserOptionChosen() {
+
+        print("Enter the name of the hairdresser: ");
+        String hairdresserName = input.getStringFromUser();
+        Hairdresser chosen = (Hairdresser) UserRepository.getInstance().getUserByUsername(hairdresserName);
+        this.chosenHairdresser = chosen;
+
+        if (hairdresserName != null && UserRepository.getInstance().isValid(hairdresserName)) {
+            CurrentUser.getLoggedUser().setHairdresser(chosen);
+            print ("The hairdresser you have chosen is: " + chosen.getUsername() + "\n");
+        } else {
+            print("Invalid hairdresser's name.");
+            choseHairdresserOptionChosen();
+
+        }
+    }
+
+    private void showAllHairdressersOptionChosen() {
         UserRepository.getInstance().printAllHairdressers();
     }
 

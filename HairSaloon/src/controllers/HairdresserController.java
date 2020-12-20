@@ -1,6 +1,8 @@
 package controllers;
 
 import constants.HairdresserOption;
+import dataBase.CurrentUser;
+import users.Hairdresser;
 
 public class HairdresserController implements Controller {
 
@@ -22,7 +24,6 @@ public class HairdresserController implements Controller {
             switch (chosenOption) {
                 case LOGOUT -> logoutOptionChosen();
                 case SHOW_YOUR_RATING -> showYourRatingOptionChosen();
-                case SET_THE_HAIRSTYLE_PRICE -> setTheHairstylePriceOptionChosen();
             }
         }
     }
@@ -34,8 +35,11 @@ public class HairdresserController implements Controller {
     }
 
     private void showYourRatingOptionChosen() {
+        Hairdresser hairdresser = (Hairdresser) CurrentUser.getLoggedUser();
+        print("Your rating is: " + hairdresser.getRating());
     }
 
-    private void setTheHairstylePriceOptionChosen() {
+    private void print(String text) {
+        System.out.println(text);
     }
 }

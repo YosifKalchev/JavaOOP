@@ -66,9 +66,16 @@ public class Console implements Input {
     public void showCustomerOptions() {
         System.out.println(
                 "Press "+ CustomerOption.LOGOUT.value() + " for logout\n" +
-                        "Press "+ CustomerOption.SHOW_ALL_HAIRDRESSERS.value() + " to show all hairdressers.\n" +
-                        "Press "+ CustomerOption.CHOOSE_HAIRDRESSER.value() + " to choose a hairdresser.\n" +
-                        "Press "+ CustomerOption.RATE_HAIRDRESSER.value() + " to rate a hairdresser.\n");
+                "Press "+ CustomerOption.SHOW_ALL_HAIRDRESSERS.value() +
+                                                " to show all hairdressers.\n" +
+                "Press "+ CustomerOption.CHOOSE_HAIRDRESSER.value() +
+                                                " to choose a hairdresser.\n" +
+                "Press "+ CustomerOption.RATE_HAIRDRESSER.value() +
+                                                " to rate a hairdresser.\n" +
+                "Press "+ CustomerOption.SHOW_ALL_INCORRECT_HAIRDRESSERS.value() +
+                                                " to show all incorrect hairdressers.\n" +
+                "press "+ CustomerOption.SHOW_ALL_HAIRSTYLES.value() +
+                                                " to show all hairstyles.\n");
     }
 
     @Override
@@ -76,9 +83,6 @@ public class Console implements Input {
         print("No logged user. Please, login.");
     }
 
-    public String getStringFromUser() {
-        return scanner.nextLine();
-    }
 
     private int getNumberFromUser() {
         int number;
@@ -88,6 +92,10 @@ public class Console implements Input {
             return getNumberFromUser();
         }
         return number;
+    }
+
+    public String getStringFromUser() {
+        return scanner.nextLine();
     }
 
     public void print(String text) {

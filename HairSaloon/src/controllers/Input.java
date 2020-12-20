@@ -20,5 +20,7 @@ public interface Input {
     HairdresserOption getHairdresserOptionFromUser();
 
     CustomerOption getCustomerOptionFromUser();
+
+
 }
 
