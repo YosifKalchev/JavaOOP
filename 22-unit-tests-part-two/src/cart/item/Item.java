@@ -2,9 +2,10 @@ package cart.item;
 
 public interface Item {
 
+
     public String getName();
 
-    String getDescription();
+    public String getDescription();
 
     public double getPrice();
 

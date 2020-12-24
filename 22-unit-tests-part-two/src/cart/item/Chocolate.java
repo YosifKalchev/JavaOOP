@@ -1,15 +1,21 @@
 package cart.item;
 
+import cart.item.Item;
+
 public class Chocolate implements Item {
 
-    private String name = "";
-    private String description = "";
-    private double price = 0;
+    private String name;
+    private String description;
+    private double price;
 
     public Chocolate(String name, String desc, double price) {
         this.name = name;
         this.description = desc;
         this.price = price;
+    }
+
+    public Chocolate () {
+        this("Choco", "Basic", 1.5);
     }
 
     @Override
