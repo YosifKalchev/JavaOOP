@@ -6,8 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        System.out.println(MapShoppingCart.getInstance().getUniqueItems().toString());
+        //todo Finish the program and create all the tests.
 
     }
 }

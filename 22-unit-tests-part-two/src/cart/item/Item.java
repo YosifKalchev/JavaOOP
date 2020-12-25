@@ -9,4 +9,5 @@ public interface Item {
 
     public double getPrice();
 
+    Item getItemByUsername(String itemName);
 }
