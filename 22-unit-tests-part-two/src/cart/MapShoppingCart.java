@@ -42,6 +42,10 @@ public class MapShoppingCart implements ShoppingCart {
     };
 
 
+    public Map<Item, Integer> getItems() {
+        return items;
+    }
+
     @Override
     public Collection<Item> getUniqueItems() {
         return items.keySet();
@@ -56,6 +60,8 @@ public class MapShoppingCart implements ShoppingCart {
             }
     }
 
+
+
     @Override
     public void removeItem(Item item) {
         if (items.containsKey(item)) {
@@ -69,7 +75,10 @@ public class MapShoppingCart implements ShoppingCart {
 
     @Override
     public double getTotal() {
-        return 0;
+        double total = 0;
+        for (Item item : items.keySet()) {
+            total += item.getPrice() * items.get(item);
+        } return total;
     }
 
 
@@ -90,4 +99,15 @@ public class MapShoppingCart implements ShoppingCart {
     }
 
 
+    //This method is to improve testing.
+    public void printCart() {
+        for (Item item : items.keySet()) {
+            System.out.println(
+                    "Name: " + item.getName() +
+                    ", Info: " + item.getDescription() +
+                    ", Price: " + item.getPrice() +
+                    ", Quantity/value: " + items.get(item)
+            );
+        }
+    }
 }

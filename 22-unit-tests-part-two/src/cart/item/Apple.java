@@ -1,13 +1,10 @@
 package cart.item;
 
-
-import cart.MapShoppingCart;
-
 public class Apple implements Item {
 
-    private String name;
-    private String description;
-    private double price;
+    private final String name;
+    private final String description;
+    private final double price;
 
     public Apple(String name, String desc, double price) {
 
@@ -31,8 +28,4 @@ public class Apple implements Item {
         return this.price;
     }
 
-    @Override
-    public Item getItemByUsername(String itemName) {
-        return MapShoppingCart.getInstance().getItemFromAllItems(itemName);
-    }
 }

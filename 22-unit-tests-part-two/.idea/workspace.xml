@@ -20,22 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/cart/MapShoppingCartTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/cart/item/AppleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/cart/item/ChocolateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/MapShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/MapShoppingCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/Trash.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Apple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Apple.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Chocolate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Chocolate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart/ItemValues.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/MapShoppingCartTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/MapShoppingCartTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/MapShoppingCartTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/item/AppleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/item/ChocolateTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cart/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cart/MapShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/MapShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart/apples/Fuji.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cart/Trash.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cart/item/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/item/Apple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cart/item/Chocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/item/Chocolate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cart/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/cart/MapShoppingCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/cart/MapShoppingCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/cart/item/AppleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/cart/item/ChocolateTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +88,7 @@
       <recent name="highway" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MapShoppingCartTest.testGetItemByNameWhenInsertStringAndItemExistsThenReturnTrue">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cart.Main" />
       <module name="22-unit-tests-part-two" />
@@ -113,21 +117,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CircleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.CircleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HighwayTest.testGetTaxWhenCarAddedThenTaxIsPositive" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -139,6 +128,37 @@
       <option name="PACKAGE_NAME" value="highway" />
       <option name="MAIN_CLASS_NAME" value="highway.HighwayTest" />
       <option name="METHOD_NAME" value="testGetTaxWhenCarAddedThenTaxIsPositive" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapShoppingCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cart.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cart" />
+      <option name="MAIN_CLASS_NAME" value="cart.MapShoppingCartTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapShoppingCartTest.testAddItemWhenItemIsAddedThenReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="22-unit-tests-part-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cart.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cart" />
+      <option name="MAIN_CLASS_NAME" value="cart.MapShoppingCartTest" />
+      <option name="METHOD_NAME" value="testAddItemWhenItemIsAddedThenReturnTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,21 +180,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="22-unit-tests-part-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.RectangleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="22-unit-tests-part-two" />
       <extension name="coverage">
@@ -192,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MapShoppingCartTest.testGetItemByNameWhenInsertStringAndItemExistsThenReturnTrue" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MapShoppingCartTest" />
+        <item itemvalue="JUnit.MapShoppingCartTest.testAddItemWhenItemIsAddedThenReturnTrue" />
+        <item itemvalue="JUnit.MapShoppingCartTest.testGetItemByNameWhenInsertStringAndItemExistsThenReturnTrue" />
         <item itemvalue="JUnit.TriangleTest" />
-        <item itemvalue="JUnit.RectangleTest" />
-        <item itemvalue="JUnit.CircleTest" />
       </list>
     </recent_temporary>
   </component>
