@@ -20,26 +20,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce923a69-d1a3-4753-b887-bfb710a55365" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/out/production/23-data-structures/com/netit/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/out/production/23-data-structures/com/netit/custom_structures/MyGenericList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/out/production/23-data-structures/com/netit/custom_structures/MyLinkedStringList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/out/production/23-data-structures/com/netit/custom_structures/MyStringList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/out/production/23-data-structures/com/netit/custom_structures/Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/out/production/23-data-structures/com/netit/todo/Todo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/src/com/netit/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/src/com/netit/custom_structures/MyGenericList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/src/com/netit/custom_structures/MyLinkedStringList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/src/com/netit/custom_structures/MyStringList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/src/com/netit/custom_structures/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../23-data-structures/src/com/netit/todo/Todo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/24-lambdas-streams.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-reflect-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-reflect.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-stdlib-jdk7-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-stdlib-jdk7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-stdlib-jdk8-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-stdlib-jdk8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-stdlib-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-stdlib.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-test-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/lib/kotlin-test.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/META-INF/24-lambdas-streams.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/lambdas/DownloaderApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/lambdas/ImageDownloader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/lambdas/SortNames.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/taxi/TaxiPark.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/taxi/TaxiParkTaskKt$checkParetoPrinciple$$inlined$sortedByDescending$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/taxi/TaxiParkTaskKt$findFaithfulPassengers$$inlined$sortedBy$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/taxi/TaxiParkTaskKt$findSmartPassengers$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/taxi/TaxiParkTaskKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/taxi/models/Driver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/taxi/models/Passenger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/production/24-lambdas-streams/taxi/models/Trip.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/META-INF/24-lambdas-streams.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/taxi/TaxiParkTestUtilKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/taxi/TestTask1FakeDrivers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/taxi/TestTask1Java.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/taxi/TestTask2FaithfulPassengers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/taxi/TestTask3FrequentPassengers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/taxi/TestTask4SmartPassengers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/taxi/TestTask5TheMostFrequentTripDurationPeriod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/out/test/24-lambdas-streams/taxi/TestTask6ParetoPrinciple.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/src/lambdas/DownloaderApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/src/lambdas/ImageDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/src/lambdas/SortNames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/src/taxi/TaxiPark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/src/taxi/models/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/src/taxi/models/Passenger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/src/taxi/models/Trip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/test/taxi/TaxiParkTestUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/test/taxi/TestTask1FakeDrivers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/test/taxi/TestTask1Java.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/test/taxi/TestTask2FaithfulPassengers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/test/taxi/TestTask3FrequentPassengers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/test/taxi/TestTask4SmartPassengers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/test/taxi/TestTask5TheMostFrequentTripDurationPeriod.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../24-lambdas-streams/test/taxi/TestTask6ParetoPrinciple.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HairSaloon/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/../23-data-structures/.idea/description.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../23-data-structures/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../23-data-structures/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../23-data-structures/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/.idea/project-template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../23-data-structures/.idea/project-template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/22-unit-testing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../23-data-structures/23-data-structures.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/src/com/netit/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-unit-testing/test/com/netit/MainTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/MapShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/MapShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/Trash.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Apple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Apple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Chocolate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Chocolate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/22-unit-tests-part-two/cart/item/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/MapShoppingCartTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/MapShoppingCartTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/MapShoppingCartTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/item/AppleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/22-unit-tests-part-two/cart/item/ChocolateTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart/MapShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/MapShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart/Trash.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart/item/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/item/Apple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart/item/Chocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/item/Chocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/cart/MapShoppingCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/cart/MapShoppingCartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/cart/item/AppleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/cart/item/ChocolateTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +132,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/test/cart" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../24-lambdas-streams" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
