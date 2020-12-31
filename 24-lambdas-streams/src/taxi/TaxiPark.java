@@ -6,7 +6,7 @@ import taxi.models.Passenger;
 import taxi.models.Trip;
 
 import java.util.*;
-import java.util.stream.Collector;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class TaxiPark {
@@ -28,6 +28,10 @@ public class TaxiPark {
                 ", allPassengers=" + allPassengers +
                 ", trips=" + trips +
                 '}';
+    }
+
+    public Set<Passenger> getAllPassengers() {
+        return allPassengers;
     }
 
     // TASKS
@@ -57,20 +61,32 @@ public class TaxiPark {
         Map<String, List<Passenger>> map = trips.stream()
                 .flatMap(trip -> trip.passengers.parallelStream())
                 .collect(Collectors.groupingBy(passenger -> passenger.name));
+
 //        System.out.println(map);
         return map.values().stream()
                 .filter(passengers -> passengers.size() >= minTrips)
                 .map(passengers -> passengers.get(0))
                 .collect(Collectors.toSet());
+
     }
 
     /*
      * Task #3. Find all the passengers, who were taken by a given driver more than once.
      */
     Set<Passenger> findFrequentPassengers(Driver driver) {
-//        return trips.stream().filter(trip -> trip.driver.equals(driver));
-        return null;
+
+        return  trips.stream()
+                .filter(trip -> trip.driver.equals(driver))
+                .flatMap(trip -> trip.passengers.parallelStream())
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream()
+                .filter(passenger -> passenger.getValue() > 1)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toSet());
     }
+            //todo solve all remaining tasks.
+
+
 
     /*
      * Task #4. Find the passengers who had a discount for majority of their trips.
