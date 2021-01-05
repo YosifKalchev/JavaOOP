@@ -24,12 +24,12 @@ public class MovieRoomRepository {
         rooms.add(movieRoom);
     }
 
-     public MovieRoom getMovieRoomByName(String name) {
-        for (MovieRoom room : rooms) {
-            if (room.getName().equals(name)) {
-                return room;
-            }
-        } return null;
+     public MovieRoom getMovieRoomByNumber(int choice) {
+         for (int i = 0; i < rooms.size(); i++) {
+             if (i == choice-1) {
+                 return rooms.get(i);
+             }
+         } return null;
     }
 
     public List<MovieRoom> getRooms() {
@@ -55,10 +55,10 @@ public class MovieRoomRepository {
     public void printAllMovieRooms() {
 
         if (!rooms.isEmpty()) {
-            for (MovieRoom room : rooms) {
+            for (int i = 0; i < rooms.size(); i++) {
                 System.out.println(
-                        "Venue name: " + room.getName() +
-                                ", Capacity: " + room.getSeats() * room.getRows()
+                        (i + 1) + ". Venue name: " + rooms.get(i).getName() +
+                                ", Capacity: " + rooms.get(i).getSeats() * rooms.get(i).getRows()
                                 + " seats.");
             }
         } else System.out.println("There are no movie rooms created.\n");
@@ -67,11 +67,19 @@ public class MovieRoomRepository {
 
 
 
-    public boolean isValid(String choice) {
-        for (MovieRoom room : rooms) {
-            if (choice.equals(room.getName())) {
+    public boolean isValid(int choice) {
+        for (int i = 0; i < rooms.size(); i++) {
+            if (i == choice-1) {
                 return true;
             }
         } return false;
+    }
+
+    public MovieRoom getMovieRoomByName(String roomName) {
+        for (MovieRoom room : rooms) {
+            if (room.getName().equals(roomName)) {
+                return room;
+            }
+        } return null;
     }
 }

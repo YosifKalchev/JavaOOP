@@ -40,21 +40,22 @@ public class CustomerController implements Controller {
         if (MovieRepository.getInstance().getMovies().isEmpty()) {
             print("There is no movies.");
         }
-        String choice = input.getStringFromUser(); //todo return choice by number
+        print("Enter a number to choose a movie");
+        int choice = input.getNumberFromUser();
         if (!MovieRepository.getInstance().isValid(choice)) {
             print("Enter a valid number.");
             buyTicketsOptionChosen();
-        } else {        Movie movie = MovieRepository.getInstance().getMovieByName(choice);
+        } else {
+            Movie movie = MovieRepository.getInstance().getMovieByNumber(choice);
 
             print("You have chosen movie: " + movie.getName());
             print(" ");
             movie.getMovieroom().printVenue();
-
             print("This is the movie room. Choose your seats");
 
             int row = Integer.MAX_VALUE;
             int trueRow = 0;
-            while (!movie.getMovieroom().isRowValid(row)) {
+            while (!movie.getMovieroom().isRowValid(row-1)) {
                 print("Enter the row");
                 trueRow = input.getNumberFromUser();
                 row = trueRow;
@@ -62,27 +63,25 @@ public class CustomerController implements Controller {
 
             int seat = Integer.MAX_VALUE;
             int trueSeat = 0;
-            while (!movie.getMovieroom().isSeatValid(seat)) {
+            while (!movie.getMovieroom().isSeatValid(seat-1)) {
                 print("Enter the seat");
                 trueSeat = input.getNumberFromUser();
                 seat = trueSeat;
             } seat = trueSeat;
 
-            Ticket ticket = new Ticket(
-                    movie, movie.getPrice(), movie.getMovieDateAndTime(), row, seat
-            );
-            print("You have bought your ticket.");
-            movie.addTicket(ticket);
-            movie.getMovieroom().setSetUnavailable(row -1, seat-1);}
-
-    }
-
-
+            if (!movie.getMovieroom().isExactSeatValid(row -1, seat -1)) {
+                System.out.println("You are trying to book a reserved seat.");
+            } else {
+                Ticket ticket = new Ticket(
+                        movie, movie.getPrice(), movie.getMovieDateAndTime(), row -1, seat-1);
+                print("You have bought your ticket.");
+                movie.addTicket(ticket);
+                movie.getMovieroom().setSetUnavailable(row -1, seat-1);}}
+        }
 
     private void seeAllMoviesOptionChosen() {
         MovieRepository.getInstance().printAllMovies();
     }
-
 
     private void logoutOptionChosen() {
         loginService.logout();

@@ -1,16 +1,18 @@
 package dataBase;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+
 
 public class Ticket {
 
     private  Movie movie;
     private  double price;
-    private  Date date;
+    private  ZonedDateTime date;
     private  int row;
     private  int seat;
 
-    public Ticket(Movie movie, double price, Date date, int row, int seat) {
+    public Ticket(Movie movie, double price, ZonedDateTime date, int row, int seat) {
         this.movie = movie;
         this.price = price;
         this.date = date;
@@ -26,7 +28,7 @@ public class Ticket {
         this.price = price;
     }
 
-    public void setDate(Date date) {
+    public void setDate(ZonedDateTime date) {
         this.date = date;
     }
 
@@ -46,7 +48,7 @@ public class Ticket {
         return price;
     }
 
-    public Date getDate() {
+    public ZonedDateTime getDate() {
         return date;
     }
 

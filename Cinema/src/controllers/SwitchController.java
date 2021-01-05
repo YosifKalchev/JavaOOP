@@ -1,5 +1,11 @@
 package controllers;
 
+import dataBase.Movie;
+import repos.MovieRepository;
+
+import java.time.ZonedDateTime;
+import java.util.List;
+
 public class SwitchController {
 
     private static SwitchController instance;
@@ -16,6 +22,14 @@ public class SwitchController {
     }
 
     public static SwitchController getInstance(Input input) {
+        //todo REMOVE
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        for (Movie movie : MovieRepository.getInstance().getMovies()) {
+            if (movie.getMovieDateAndTime().isAfter(ZonedDateTime.now())) {
+                MovieRepository.getInstance().removeMovie(movie);
+            }
+        }
+
         if (instance == null) instance = new SwitchController(input);
         return instance;
     }

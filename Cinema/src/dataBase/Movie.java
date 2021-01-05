@@ -1,5 +1,7 @@
 package dataBase;
 
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,10 +11,10 @@ public class Movie {
     private final String name;
     private final double price;
     private final MovieRoom movieroom;
-    private final Date movieDateAndTime;
+    private final ZonedDateTime movieDateAndTime;
     private final List<Ticket> tickets;
 
-    public Date getMovieDateAndTime() {
+    public ZonedDateTime getMovieDateAndTime() {
         return movieDateAndTime;
     }
 
@@ -28,7 +30,7 @@ public class Movie {
 
 
 
-    public Movie(String name, double price, MovieRoom movieroom, Date movieDateAndTime) {
+    public Movie(String name, double price, MovieRoom movieroom, ZonedDateTime movieDateAndTime) {
         this.name = name;
         this.price = price;
         this.movieroom = new MovieRoom(movieroom.getName(),

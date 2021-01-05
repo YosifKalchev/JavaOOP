@@ -7,6 +7,7 @@ public class MovieRoom {
     private final String name;
     private final String [][] seats;
 
+
     public MovieRoom (String name, int rowNum, int columnNum) {
         this.name = name;
         this.seats = new String[rowNum][columnNum];
@@ -79,11 +80,11 @@ public class MovieRoom {
             }
             System.out.println();
         }
-        System.out.println("\n\nThis is the scheme of the room: "+ name +"\n");
+        System.out.println("\nThis is the scheme of the room: "+ name +"\n");
     }
 
     public void setSetUnavailable(int row, int seat) {
-        seats[row][seat] = "*";
+        seats[row][seat] = "bought";
     }
 
 
@@ -93,5 +94,9 @@ public class MovieRoom {
 
     public boolean isSeatValid(int row) {
         return row < seats[0].length;
+    }
+
+    public boolean isExactSeatValid(int row, int seat) {
+        return seats[row][seat] == null;
     }
 }

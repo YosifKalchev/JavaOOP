@@ -3,6 +3,7 @@ package repos;
 import dataBase.Movie;
 import dataBase.MovieRoom;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,39 +26,44 @@ public class MovieRepository {
         movies.add(movie);
     }
 
-
+    public void removeMovie(Movie movie) {
+        movies.remove(movie);
+    }
     public void printAllMovies() {
         if (!movies.isEmpty()) {
             for (int i = 0; i < movies.size(); i++) {
                 System.out.println(
-                        i+1 +
-                                ". Movie name: " + movies.get(i).getName() +
-                                ", Venue: " + movies.get(i).getMovieroom().getName());
-                                movies.get(i).getMovieroom().printVenue();
-                System.out.println();
+                        (i + 1 ) + ". Movie name: " + movies.get(i).getName() +
+                                ", Venue: " + movies.get(i).getMovieroom().getName()+ "Date and time: " +
+                                movies.get(i)
+                                        .getMovieDateAndTime()
+                                        .format(DateTimeFormatter
+                                                .ofPattern("MM-dd-yyyy - HH:mm")));
 
-            }
+
+            } System.out.println();
         } else System.out.println("There are no available movies.\n");
-
     }
 
     public List<Movie> getMovies() {
         return movies;
     }
 
-    public boolean isValid(String choice) {
-        for (Movie movie : movies) {
-            if (choice.equals(movie.getName())) {
+    public boolean isValid(int choice) {
+        for (int i = 0; i < movies.size(); i++) {
+            if (i == choice - 1) {
                 return true;
             }
         } return false;
     }
 
-    public Movie getMovieByName(String choice) {
-        for (Movie movie : movies) {
-            if (choice.equals(movie.getName())) {
-                return movie;
+    public Movie getMovieByNumber(int choice) {
+        for (int i = 0; i < movies.size(); i++) {
+            if (i == choice - 1) {
+                return movies.get(i);
             }
         } return null;
     }
+
+
 }
