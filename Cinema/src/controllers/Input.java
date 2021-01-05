@@ -9,7 +9,7 @@ public interface Input {
     String getPasswordFromUser();
     String getStringFromUser();
     int getNumberFromUser();
-
+    double getDoubleFromUser();
     void showErrorWrongLoginInput();
 
     void showAdminOptions();

@@ -69,16 +69,10 @@ public class Console implements Input {
     public void showCustomerOptions() {
         System.out.println(
                 "Press "+ CustomerOption.LOGOUT.value() + " for logout\n" +
-                "Press "+ CustomerOption.B.value() +
-                                                " B.\n" +
-                "Press "+ CustomerOption.C.value() +
-                                                " C.\n" +
-                "Press "+ CustomerOption.D.value() +
-                                                " D.\n" +
-                "Press "+ CustomerOption.E.value() +
-                                                " E.\n" +
-                "press "+ CustomerOption.F.value() +
-                                                " F.\n");
+                "Press "+ CustomerOption.SEE_ALL_MOVIES.value() +
+                         " to see all movies.\n" +
+                "Press "+ CustomerOption.BUY_TICKETS.value() +
+                         " to buy tickets.\n");
     }
 
     @Override
@@ -100,6 +94,23 @@ public class Console implements Input {
         } catch (NumberFormatException e) {
             print("The digit you have entered is not a number. Try again.");
             return getNumberFromUser();
+        }
+        return number;
+    }
+
+    @Override
+    public double getDoubleFromUser() {
+        double number;
+
+        try {
+            number = Double.parseDouble(scanner.nextLine());
+            if (number < 0.01) {
+                print("Enter a positive number.");
+                return getDoubleFromUser();
+            }
+        } catch (NumberFormatException e) {
+            print("The digit you have entered is not a number. Try again.");
+            return getDoubleFromUser();
         }
         return number;
     }

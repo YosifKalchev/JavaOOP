@@ -1,8 +1,14 @@
 package controllers;
 
 import constants.AdminOption;
+import dataBase.Movie;
 import dataBase.MovieRoom;
+import repos.MovieRepository;
 import repos.MovieRoomRepository;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class AdminController implements Controller {
 
@@ -35,6 +41,9 @@ public class AdminController implements Controller {
         loginService.logout();
         SwitchController.getInstance(input).startLogin();
     }
+
+
+
 
     private void showAllMovieRoomsOptionChosen() {
         MovieRoomRepository.getInstance().printAllMovieRooms();
@@ -75,12 +84,52 @@ public class AdminController implements Controller {
 
 
 
-
     private void showAllActiveMoviesOptionChosen() {
+
+
     }
 
     private void createMovieOptionChosen() {
+
+        MovieRoomRepository.getInstance().printAllMovieRooms();
+        print("Enter the name of the chosen movie room");
+        String  choice = input.getStringFromUser(); //todo return choice by number
+        if (!MovieRoomRepository.getInstance().isValid(choice)) {
+            print("Enter a valid name.");
+            createMovieOptionChosen();
+        } else {
+            MovieRoom room = MovieRoomRepository.getInstance().getMovieRoomByName(choice);
+            print("You have chosen room: " + room.getName());
+            print("Enter the name of the movie");
+            String movieName = input.getStringFromUser();
+            print("Enter the price of the ticket: ");
+            double ticketPrice = input.getDoubleFromUser();
+            Date movieDateAndTime = getDateFromUser();
+            Movie movie = new Movie(movieName, ticketPrice, room, movieDateAndTime);
+            MovieRepository.getInstance().addMovie(movie);
+
+            print("You have created a movie " + movieName +
+                    " in room " + room.getName() +
+                    ". The ticket price is: " + ticketPrice);
+            print("");
+        }
+
     }
+
+
+        public Date getDateFromUser() {
+            Date date = new Date();
+            print("Enter the time and date ( example: 20:15 01-01-2000 )");
+            String inputDate = input.getStringFromUser();
+            try {
+                date = new SimpleDateFormat("kk:mm dd-MM-yyyy").parse(inputDate);
+            } catch (ParseException e) {
+                System.out.println("The date is not in valid format. Try again");
+                getDateFromUser();
+            } return date;
+        }
+
+
 
 
 

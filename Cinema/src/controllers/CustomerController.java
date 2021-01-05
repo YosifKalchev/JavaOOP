@@ -1,7 +1,9 @@
 package controllers;
 
 import constants.CustomerOption;
-
+import dataBase.Movie;
+import dataBase.Ticket;
+import repos.MovieRepository;
 
 
 
@@ -26,31 +28,59 @@ public class CustomerController implements Controller {
             chosenOption = input.getCustomerOptionFromUser();
             switch (chosenOption) {
                 case LOGOUT -> logoutOptionChosen();
-                case B -> showOptionChosenB();
-                case C -> showOptionChosenC();
-                case D -> showOptionChosenD();
-                case E -> showOptionChosenE();
-                case F -> showOptionChosenF();
-
+                case SEE_ALL_MOVIES-> seeAllMoviesOptionChosen();
+                case BUY_TICKETS -> buyTicketsOptionChosen();
             }
         }
     }
 
-    private void showOptionChosenF() {
+
+    private void buyTicketsOptionChosen() {
+        MovieRepository.getInstance().printAllMovies();
+        if (MovieRepository.getInstance().getMovies().isEmpty()) {
+            print("There is no movies.");
+        }
+        String choice = input.getStringFromUser(); //todo return choice by number
+        if (!MovieRepository.getInstance().isValid(choice)) {
+            print("Enter a valid number.");
+            buyTicketsOptionChosen();
+        } else {        Movie movie = MovieRepository.getInstance().getMovieByName(choice);
+
+            print("You have chosen movie: " + movie.getName());
+            print(" ");
+            movie.getMovieroom().printVenue();
+
+            print("This is the movie room. Choose your seats");
+
+            int row = Integer.MAX_VALUE;
+            int trueRow = 0;
+            while (!movie.getMovieroom().isRowValid(row)) {
+                print("Enter the row");
+                trueRow = input.getNumberFromUser();
+                row = trueRow;
+            } row = trueRow;
+
+            int seat = Integer.MAX_VALUE;
+            int trueSeat = 0;
+            while (!movie.getMovieroom().isSeatValid(seat)) {
+                print("Enter the seat");
+                trueSeat = input.getNumberFromUser();
+                seat = trueSeat;
+            } seat = trueSeat;
+
+            Ticket ticket = new Ticket(
+                    movie, movie.getPrice(), movie.getMovieDateAndTime(), row, seat
+            );
+            print("You have bought your ticket.");
+            movie.addTicket(ticket);
+            movie.getMovieroom().setSetUnavailable(row -1, seat-1);}
+
     }
 
-    private void showOptionChosenE() {
-    }
 
-    private void showOptionChosenD() {
-    }
 
-    private void showOptionChosenC() {
-
-    }
-
-    private void showOptionChosenB() {
-
+    private void seeAllMoviesOptionChosen() {
+        MovieRepository.getInstance().printAllMovies();
     }
 
 
@@ -63,63 +93,5 @@ public class CustomerController implements Controller {
         System.out.println(text);
     }
 
-
-
-//    private void showAllHairstylesOptionChosen() {
-//        HairstyleRepository.getInstance().showAllHairstyles();
-//    }
-//
-//    private void showAllIncorrectHairdressersOptionChosen() {
-//        UserRepository.getInstance().showAllIncorrectHairdressers();
-//    }
-//
-//    private void rateHairdresserOptionChosen() {
-//        if (chosenHairdresser == null) {
-//            print("You haven't chosen a hairdresser.\n");
-//        } else {
-//            print("Enter a number from 1 to 5 to rate the hairdresser: ");
-//            String entry = input.getStringFromUser();
-//            try {
-//                int chosenOption = Integer.parseInt(entry);
-//                if (chosenOption > 5 || chosenOption < 1) {
-//                    print("The entered number is not from 1 to 5. Try again.");
-//                } else {
-//                    Hairstyle hairstyle = new Hairstyle((Customer) CurrentUser.getLoggedUser(), chosenHairdresser,
-//                            chosenOption, chosenHairdresser.getHairstylePrice());
-//                    HairstyleRepository.getInstance().addHairstyle(hairstyle);
-//                    chosenHairdresser = null;
-//                }
-//            }
-//
-//            catch(NumberFormatException ex) {
-//                rateHairdresserOptionChosen();
-//            }
-//
-//            catch (Exception exception) {
-//                System.out.println("Unspecified error (not a NumberFormatException).");
-//            }
-//        }
-//    }
-//
-//    private void choseHairdresserOptionChosen() {
-//
-//        print("Enter the name of the hairdresser: ");
-//        String hairdresserName = input.getStringFromUser();
-//        Hairdresser chosen = (Hairdresser) UserRepository.getInstance().getUserByUsername(hairdresserName);
-//        this.chosenHairdresser = chosen;
-//
-//        if (hairdresserName != null && UserRepository.getInstance().isValid(hairdresserName)) {
-//            CurrentUser.getLoggedUser().setHairdresser(chosen);
-//            print ("The hairdresser you have chosen is: " + chosen.getUsername() + "\n");
-//        } else {
-//            print("Invalid hairdresser's name.");
-//            choseHairdresserOptionChosen();
-//
-//        }
-//    }
-//
-//    private void showAllHairdressersOptionChosen() {
-//        UserRepository.getInstance().printAllHairdressers();
-//    }
 }
 

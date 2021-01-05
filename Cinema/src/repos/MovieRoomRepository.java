@@ -17,6 +17,7 @@ public class MovieRoomRepository {
     private MovieRoomRepository() {
 
         rooms = new ArrayList<>();
+        rooms.add(new MovieRoom("test", 5,5));
     }
 
     public void addMovieRoom(MovieRoom movieRoom) {
@@ -24,9 +25,9 @@ public class MovieRoomRepository {
     }
 
      public MovieRoom getMovieRoomByName(String name) {
-        for (MovieRoom movieRoom : rooms) {
-            if (movieRoom.getName().equals(name)) {
-                return movieRoom;
+        for (MovieRoom room : rooms) {
+            if (room.getName().equals(name)) {
+                return room;
             }
         } return null;
     }
@@ -55,10 +56,22 @@ public class MovieRoomRepository {
 
         if (!rooms.isEmpty()) {
             for (MovieRoom room : rooms) {
-                System.out.println("Venue name: " + room.getName() +
-                        ", Capacity: " + room.getSeats() * room.getRows() + " seats.");
+                System.out.println(
+                        "Venue name: " + room.getName() +
+                                ", Capacity: " + room.getSeats() * room.getRows()
+                                + " seats.");
             }
         } else System.out.println("There are no movie rooms created.\n");
 
+    }
+
+
+
+    public boolean isValid(String choice) {
+        for (MovieRoom room : rooms) {
+            if (choice.equals(room.getName())) {
+                return true;
+            }
+        } return false;
     }
 }

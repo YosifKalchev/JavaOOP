@@ -3,11 +3,8 @@ package constants;
 public enum CustomerOption {
 
     LOGOUT(1),
-    B(2),
-    C(3),
-    D(4),
-    E(5),
-    F(6);
+    SEE_ALL_MOVIES(2),
+    BUY_TICKETS(3);
 
     private final int value;
     CustomerOption(int value) {

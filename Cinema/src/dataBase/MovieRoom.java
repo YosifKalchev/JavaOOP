@@ -12,6 +12,8 @@ public class MovieRoom {
         this.seats = new String[rowNum][columnNum];
     }
 
+
+
     public String getName() {
         return name;
     }
@@ -69,10 +71,10 @@ public class MovieRoom {
             for (int j = 0; j < seats[i].length; j++) {
                 blank = (i < 9) ? " " : "";
                 if (seats[i][j] == null) {
-
                     System.out.print("[ " + blank  + (i+1) + "-"+ (j + 1) +  "  ] ");
                 } else {
-                    System.out.println("[ " + blank + "x  ] ");
+//                    System.out.println("[ " + blank + " x   ] ");
+                    System.out.print("[ " + blank  + "-" + "X"+ "-" +  "  ] ");
                 }
             }
             System.out.println();
@@ -80,6 +82,16 @@ public class MovieRoom {
         System.out.println("\n\nThis is the scheme of the room: "+ name +"\n");
     }
 
+    public void setSetUnavailable(int row, int seat) {
+        seats[row][seat] = "*";
+    }
 
 
+    public boolean isRowValid(int row) {
+        return row < seats.length;
+    }
+
+    public boolean isSeatValid(int row) {
+        return row < seats[0].length;
+    }
 }

@@ -8,12 +8,19 @@ public class Start {
         SwitchController.getInstance(new Console()).startLogin();
 
         /* todo
-            create movie option
-            add date and time for movie
-            create ticket buying option
-            create streams for in and out
-            !NB room of a current movie projection should be instance and print the seats left -
-            if there isn't any print message to the user.
+            check: movie cannot be created in the past time
+            check: ticket cannt be bought if the movie is not available
+            check: delete movie after the projection time past
+            -
+            revert: choose options as numbers
+            -
+            create more text in "buy ticket option"
+            
+            create Streams
+            create unit tests
+
+
+
 
         * */
 
