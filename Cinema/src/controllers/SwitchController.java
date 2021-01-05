@@ -22,16 +22,27 @@ public class SwitchController {
     }
 
     public static SwitchController getInstance(Input input) {
-        //todo REMOVE
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        for (Movie movie : MovieRepository.getInstance().getMovies()) {
-            if (movie.getMovieDateAndTime().isAfter(ZonedDateTime.now())) {
-                MovieRepository.getInstance().removeMovie(movie);
-            }
-        }
+
+//        removePastMovies();
 
         if (instance == null) instance = new SwitchController(input);
         return instance;
+    }
+
+    private static void removePastMovies() {
+        try {
+            if (MovieRepository.getInstance() != null) {
+                for (Movie movie : MovieRepository.getInstance().getMovies()) {
+                    if (movie.getMovieDateAndTime().isAfter(ZonedDateTime.now())) {
+                        MovieRepository.getInstance().removeMovie(movie);
+                    }
+                }
+            }
+
+        } catch (Exception ignored) {
+        }
+
+
     }
 
     public void startLogin() {

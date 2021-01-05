@@ -1,16 +1,15 @@
 package dataBase;
 
-import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 
 public class Ticket {
 
-    private  Movie movie;
-    private  double price;
-    private  ZonedDateTime date;
-    private  int row;
-    private  int seat;
+    private final Movie movie;
+    private final double price;
+    private final ZonedDateTime date;
+    private final int row;
+    private final int seat;
 
     public Ticket(Movie movie, double price, ZonedDateTime date, int row, int seat) {
         this.movie = movie;
@@ -20,25 +19,15 @@ public class Ticket {
         this.seat = seat;
     }
 
-    public void setMovie(Movie movie) {
-        this.movie = movie;
+    public Ticket() {
+        this.movie = null;
+        this.price = 0;
+        this.date = ZonedDateTime.now();
+        this.row = 0;
+        this.seat = 0;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
-    public void setDate(ZonedDateTime date) {
-        this.date = date;
-    }
-
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public void setSeat(int seat) {
-        this.seat = seat;
-    }
 
     public Movie getMovie() {
         return movie;

@@ -1,7 +1,6 @@
 package repos;
 
 import dataBase.Movie;
-import dataBase.MovieRoom;
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -34,7 +33,7 @@ public class MovieRepository {
             for (int i = 0; i < movies.size(); i++) {
                 System.out.println(
                         (i + 1 ) + ". Movie name: " + movies.get(i).getName() +
-                                ", Venue: " + movies.get(i).getMovieroom().getName()+ "Date and time: " +
+                                ", Venue: " + movies.get(i).getMovieRoom().getName()+ "Date and time: " +
                                 movies.get(i)
                                         .getMovieDateAndTime()
                                         .format(DateTimeFormatter

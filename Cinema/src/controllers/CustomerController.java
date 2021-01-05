@@ -41,6 +41,7 @@ public class CustomerController implements Controller {
             print("There is no movies.");
         }
         print("Enter a number to choose a movie");
+
         int choice = input.getNumberFromUser();
         if (!MovieRepository.getInstance().isValid(choice)) {
             print("Enter a valid number.");
@@ -50,34 +51,63 @@ public class CustomerController implements Controller {
 
             print("You have chosen movie: " + movie.getName());
             print(" ");
-            movie.getMovieroom().printVenue();
-            print("This is the movie room. Choose your seats");
+            movie.getMovieRoom().printVenue();
+            print("This is the movie room. \nEnter the number of the tickets you want to buy:");
 
-            int row = Integer.MAX_VALUE;
-            int trueRow = 0;
-            while (!movie.getMovieroom().isRowValid(row-1)) {
-                print("Enter the row");
-                trueRow = input.getNumberFromUser();
-                row = trueRow;
-            } row = trueRow;
+            int tickets = input.getNumberFromUser();
+            Ticket ticket = new Ticket();
+            int[] ticketCount = new int[tickets];
+            int totalPrice = tickets;
+            for (int number = 0; number < ticketCount.length; number++) {
 
-            int seat = Integer.MAX_VALUE;
-            int trueSeat = 0;
-            while (!movie.getMovieroom().isSeatValid(seat-1)) {
-                print("Enter the seat");
-                trueSeat = input.getNumberFromUser();
-                seat = trueSeat;
-            } seat = trueSeat;
+                int row = isRowValidNumber(movie);
+                int seat = isSeatValidNumber(movie);
 
-            if (!movie.getMovieroom().isExactSeatValid(row -1, seat -1)) {
-                System.out.println("You are trying to book a reserved seat.");
-            } else {
-                Ticket ticket = new Ticket(
-                        movie, movie.getPrice(), movie.getMovieDateAndTime(), row -1, seat-1);
-                print("You have bought your ticket.");
-                movie.addTicket(ticket);
-                movie.getMovieroom().setSetUnavailable(row -1, seat-1);}}
+                if (!movie.getMovieRoom().isExactSeatValid(row -1, seat -1)) {
+                    System.out.println("You are trying to book a reserved seat.");
+                    number--;
+                } else {
+                    ticket = new Ticket(
+                            movie, movie.getPrice(), movie.getMovieDateAndTime(), row -1, seat-1);
+
+                            movie.getMovieRoom().setSetUnavailable(row -1, seat-1);}
+                            movie.addTicket(ticket);
+                            movie.printTicket(ticket);
+            
+
+            }
+            totalPrice *= movie.getPrice();
+            print("You have bought your tickets.+\nTotal price: " + totalPrice);
+
+
+
+
         }
+    }
+
+    private int isSeatValidNumber(Movie movie) {
+        int seat = Integer.MAX_VALUE;
+        int trueSeat = 0;
+        while (!movie.getMovieRoom().isSeatValid(seat-1)) {
+            print("Enter the seat");
+            trueSeat = input.getNumberFromUser();
+            seat = trueSeat;
+        }
+        seat = trueSeat;
+        return seat;
+    }
+
+    private int isRowValidNumber(Movie movie) {
+        int row = Integer.MAX_VALUE;
+        int trueRow = 0;
+        while (!movie.getMovieRoom().isRowValid(row-1)) {
+            print("Enter the row");
+            trueRow = input.getNumberFromUser();
+            row = trueRow;
+        }
+        row = trueRow;
+        return row;
+    }
 
     private void seeAllMoviesOptionChosen() {
         MovieRepository.getInstance().printAllMovies();

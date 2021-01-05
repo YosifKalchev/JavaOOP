@@ -7,18 +7,10 @@ public class Start {
 
         SwitchController.getInstance(new Console()).startLogin();
 
-        /* todo
-            check: movie cannot be created in the past time
-            check: ticket cannot be bought if the movie is not available
-            check: delete movie after the projection time past
-            -
-            create Streams
-            create unit tests
 
 
 
 
-        * */
 
     }
 }
