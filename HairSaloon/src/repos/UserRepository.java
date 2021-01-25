@@ -88,7 +88,7 @@ public class UserRepository {
         }
 
     public void showAllIncorrectHairdressers() {
-
+//todo make it with stream!!!
         for (User user : users) {
            if (user instanceof Hairdresser) {
                double rating = HairstyleRepository.getInstance().getHairdresserRealRating((Hairdresser) user);
