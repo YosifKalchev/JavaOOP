@@ -20,9 +20,9 @@ public class UserRepository {
 
     private UserRepository() {
         users = new ArrayList<>();
-        users.add(new Waiter("Waiter", "waiter"));
-        users.add(new Chef("Tokev", "tokev"));
-        users.add(new Chef ("Nikolchev", "nikolchev"));
+        users.add(new Waiter("waiter", "waiter"));
+        users.add(new Chef("chef1", "chef1"));
+        users.add(new Chef ("chef2", "chef2"));
     }
 
     public User getUserByUsername(String username) {

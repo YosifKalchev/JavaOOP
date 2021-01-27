@@ -9,7 +9,6 @@ public class Order {
     public Order() {
         orderObjectCounter++;
         orderNumber = orderObjectCounter;
-
     }
 
     public int getOrderNumber() {

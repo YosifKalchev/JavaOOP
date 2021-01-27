@@ -20,9 +20,9 @@ public class ChefController implements Controller {
             input.showChefOptions();
             chosenOption = input.getChefOptionFromUser();
             switch (chosenOption) {
-                case LOGOUT : logoutOptionChosen(); break;
-                case SEE_NEW_ORDERS: seeNewOrdersOptionChosen(); break;
-                case CHANGE_ORDER_STATUS: changeOrderStatusOptionChosen(); break;
+                case LOGOUT -> logoutOptionChosen();
+                case SEE_NEW_ORDERS -> seeNewOrdersOptionChosen();
+                case CHANGE_ORDER_STATUS -> changeOrderStatusOptionChosen();
             }
         }
     }

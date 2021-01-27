@@ -1,5 +1,5 @@
-import constants.WaiterOption;
-import dataBase.Repositories.OrderRepository;
+import constants.WaiterOptions;
+import constants.WaiterSubOptions;
 
 public class WaiterController implements Controller {
     protected final LoginService loginService;
@@ -28,45 +28,44 @@ public class WaiterController implements Controller {
             }
 
     public void startAdminMenu() {
-        WaiterOption chosenOption = null;
-        while (chosenOption != WaiterOption.LOGOUT) {
+        WaiterOptions chosenOption = null;
+        while (chosenOption != WaiterOptions.LOGOUT) {
             input.showWaiterOptions();
             chosenOption = input.getWaiterOptionFromUser();
+
             switch (chosenOption) {
-                case LOGOUT:
-                    System.out.println("Option 1");logoutOptionChosen(); break;
-                case CREATE_ORDER:
-                    System.out.println("Option 2");createOrderOptionChosen(); break;
-                case CHANGE_ORDER_STATUS:
-                    System.out.println("Option 3");changeOrderStatusOptionChosen(); break;
-                case SEE_ALL_ACTIVE_ORDERS: seeAllActiveOrdersOptionChosen(); break;
-                case SEE_ORDER_HISTORY: seeOrderHistoryOptionChosen(); break;
-                case SEE_THE_MENU: seeTheMenuOptionChosen(); break;
-                case CHANGE_THE_MENU: changeTheMenuOptionChosen(); break;
-    }
+                case LOGOUT -> logoutOptionChosen();
+                case CREATE_ORDER -> createOrderOptionChosen();
+                case CHANGE_ORDER_STATUS -> changeOrderStatusOptionChosen();
+                case SEE_ALL_ACTIVE_ORDERS -> seeAllActiveOrdersOptionChosen();
+                case SEE_ORDER_HISTORY -> seeOrderHistoryOptionChosen();
+                case SEE_THE_MENU -> seeTheMenuOptionChosen();
+                case CHANGE_THE_MENU -> changeTheMenuOptionChosen();
+            }
 }
     }
 
+
     private void changeTheMenuOptionChosen() {
-        WaiterOption chosenOption = null;
-        while (chosenOption != WaiterOption.BACK_TO_MAIN_WAITER_MENU) {
+        WaiterSubOptions chosenOption = null;
+        while (chosenOption != WaiterSubOptions.BACK_TO_MAIN_WAITER_MENU) {
             input.showWaiterOptionsForTheMenu();
-            chosenOption = input.getWaiterOptionFromUser();
+            chosenOption = input.getWaiterSubOptionFromUSer();
             switch (chosenOption) {
-                case ADD_CONSUMABLE: addConsumableOptionChosen(); break;
-                case REMOVE_CONSUMABLE: ;removeConsumableOptionChosen(); break;
-                case BACK_TO_MAIN_WAITER_MENU: startProgram(); break;
+                case ADD_CONSUMABLE-> addConsumableOptionChosen();
+                case REMOVE_CONSUMABLE -> removeConsumableOptionChosen();
+                case BACK_TO_MAIN_WAITER_MENU -> startAdminMenu();
             }
         }
     }
 
 
     private void removeConsumableOptionChosen() {
-
+        System.out.println("Consumable removed.");
     }
 
     private void addConsumableOptionChosen() {
-
+        System.out.println("Consumable added.");
     }
 
     private void seeTheMenuOptionChosen() {

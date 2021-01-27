@@ -1,6 +1,6 @@
 package constants;
 
-public enum WaiterOption {
+public enum WaiterOptions {
 
     LOGOUT(1),
     CREATE_ORDER (2),
@@ -9,23 +9,22 @@ public enum WaiterOption {
     SEE_ORDER_HISTORY (5),
     SEE_THE_MENU (6),
     CHANGE_THE_MENU (7),
-    ADD_CONSUMABLE (1),
-    REMOVE_CONSUMABLE (2),
-    BACK_TO_MAIN_WAITER_MENU (11);
+    ADD_CONSUMABLE (11),
+    REMOVE_CONSUMABLE (12),
+    BACK_TO_MAIN_WAITER_MENU (13);
 
     public int value;
 
-    WaiterOption (int value) {
+    WaiterOptions(int value) {
         this.value = value;
     }
 
-    public static WaiterOption convertToWaiterOption(int option) {
-        WaiterOption[] values = values();
-        for (int i = 0; i < values.length; i++) {
-            WaiterOption waiterOption = values[i];
+    public static WaiterOptions convertToWaiterOption(int option) {
+        WaiterOptions[] values = values();
+        for (WaiterOptions waiterOption : values) {
             if (option == waiterOption.value) {
                 return waiterOption;
-            };
+            }
         }
         return null;
     }

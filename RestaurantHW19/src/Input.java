@@ -1,12 +1,12 @@
 import constants.ChefOption;
-import constants.WaiterOption;
+import constants.WaiterOptions;
+import constants.WaiterSubOptions;
 
 public interface Input {
 
     String getUsernameFromUser();
     String getPasswordFromUser();
     String getStringFromUser();
-    int getIntFromUser();
     int getNumberFromUser();
 
     void showErrorLoginInput();
@@ -16,6 +16,7 @@ public interface Input {
     void showLoginMessage();
 
 
-    WaiterOption getWaiterOptionFromUser();
+    WaiterSubOptions getWaiterSubOptionFromUSer();
+    WaiterOptions getWaiterOptionFromUser();
     ChefOption getChefOptionFromUser();
 }

@@ -1,6 +1,6 @@
 import constants.ChefOption;
-import constants.WaiterOption;
-import dataBase.Waiter;
+import constants.WaiterOptions;
+import constants.WaiterSubOptions;
 
 import java.util.Scanner;
 
@@ -30,10 +30,6 @@ public class Console implements Input {
         return scanner.nextLine();
     }
 
-    @Override
-    public int getIntFromUser() {
-        return Integer.parseInt(scanner.nextLine());
-    }
 
     @Override
     public void showErrorLoginInput() {
@@ -43,21 +39,21 @@ public class Console implements Input {
     @Override
     public void showWaiterOptions() {
         print(
-                "Press " + WaiterOption.LOGOUT.value + " for logout.\n" +
-                "Press " + WaiterOption.CREATE_ORDER.value + " to create an order.\n" +
-                "Press " + WaiterOption.CHANGE_ORDER_STATUS.value + " to change the order status.\n" +
-                "Press " + WaiterOption.SEE_ALL_ACTIVE_ORDERS.value + " to see all active orders.\n" +
-                "Press " + WaiterOption.SEE_ORDER_HISTORY.value + " to see the order history.\n" +
-                "Press " + WaiterOption.SEE_THE_MENU.value + " to create an order.\n" +
-                "Press " + WaiterOption.CHANGE_THE_MENU.value + " to change the menu.\n");
+                "Press " + WaiterOptions.LOGOUT.value + " for logout.\n" +
+                "Press " + WaiterOptions.CREATE_ORDER.value + " to create an order.\n" +
+                "Press " + WaiterOptions.CHANGE_ORDER_STATUS.value + " to change the order status.\n" +
+                "Press " + WaiterOptions.SEE_ALL_ACTIVE_ORDERS.value + " to see all active orders.\n" +
+                "Press " + WaiterOptions.SEE_ORDER_HISTORY.value + " to see the order history.\n" +
+                "Press " + WaiterOptions.SEE_THE_MENU.value + " to create an order.\n" +
+                "Press " + WaiterOptions.CHANGE_THE_MENU.value + " to change the menu.\n");
     }
 
     @Override
     public void showWaiterOptionsForTheMenu() {
         print(
-              "Press " + WaiterOption.ADD_CONSUMABLE.value + " to add a consumable to the menu.\n" +
-              "Press " + WaiterOption.REMOVE_CONSUMABLE.value + " to remove a consumable from the menu.\n" +
-              "Press " + WaiterOption.BACK_TO_MAIN_WAITER_MENU.value + " to return to the main menu."
+              "Press " + WaiterSubOptions.ADD_CONSUMABLE.value + " to add a consumable to the menu.\n" +
+              "Press " + WaiterSubOptions.REMOVE_CONSUMABLE.value + " to remove a consumable from the menu.\n" +
+              "Press " + WaiterSubOptions.BACK_TO_MAIN_WAITER_MENU.value + " to return to the main menu."
         );
     }
 
@@ -76,13 +72,27 @@ public class Console implements Input {
     }
 
     @Override
-    public WaiterOption getWaiterOptionFromUser() {
+    public WaiterSubOptions getWaiterSubOptionFromUSer() {
         int userInput;
         do {
             print("Enter a valid waiter option:");
             userInput = getNumberFromUser();
-        }  while (WaiterOption.convertToWaiterOption(userInput) == null);
-        return WaiterOption.convertToWaiterOption(userInput);
+        }  while (WaiterSubOptions.convertToWaiterOption(userInput) == null);
+        return WaiterSubOptions.convertToWaiterOption(userInput);
+    }
+
+
+
+
+
+    @Override
+    public WaiterOptions getWaiterOptionFromUser() {
+        int userInput;
+        do {
+            print("Enter a valid waiter option:");
+            userInput = getNumberFromUser();
+        }  while (WaiterOptions.convertToWaiterOption(userInput) == null);
+        return WaiterOptions.convertToWaiterOption(userInput);
     }
 
     @Override
