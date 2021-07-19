@@ -23,25 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="559f09fb-72f6-4ffc-8ed9-cf820eceee70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/constants/WaiterSubOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/Console.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/WaiterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/constants/WaiterOption.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantHW19/dataBase/Repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChefController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChefController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WaiterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WaiterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/AdditionalOptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/WaiterOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/WaiterOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataBase/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataBase/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataBase/Repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataBase/Repositories/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +73,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
